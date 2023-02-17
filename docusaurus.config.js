@@ -12,21 +12,19 @@ const config = {
 
   // Set the production url of your site here
   url: 'https://neurostuff.github.io/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/compose-docs/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'neurostuff', // Usually your GitHub org/user name.
-  projectName: 'compose-docs', // Usually your repo name.
+  organizationName: 'neurostuff', 
+  projectName: 'compose-docs',
+  deploymentBranch: 'master',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+
+  // internalization
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -39,15 +37,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Change this w/ edit URL
           editUrl:
             'https://github.com/neurostuff/compose-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Change this w/ edit URL
           editUrl:
             'https://github.com/neurostuff/compose/tree/main/packages/create-docusaurus/templates/shared/',
         },
