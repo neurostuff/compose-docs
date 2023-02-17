@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://neurostuff.github.io/compose-docs/blog</id>
+    <title>Neurosynth Compose Documentation Blog</title>
+    <updated>2022-02-17T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://neurostuff.github.io/compose-docs/blog"/>
+    <subtitle>Neurosynth Compose Documentation Blog</subtitle>
+    <icon>https://neurostuff.github.io/compose-docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[First Blog Post]]></title>
+        <id>https://neurostuff.github.io/compose-docs/blog/first-blog-post</id>
+        <link href="https://neurostuff.github.io/compose-docs/blog/first-blog-post"/>
+        <updated>2022-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introducing Neurosynth-Compose!]]></summary>
+        <content type="html"><![CDATA[<p>Introducing Neurosynth-Compose!</p>]]></content>
+        <author>
+            <name>Alejandro de la Vega</name>
+            <uri>https://github.com/adelavega</uri>
+        </author>
+        <category label="hello" term="hello"/>
+        <category label="neurosynth" term="neurosynth"/>
+    </entry>
+</feed>
