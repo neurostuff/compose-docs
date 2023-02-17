@@ -1,17 +1,17 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+alejandro:
+  name: Alejandro de la Vega
+  title: Research Scientist
+  url: https://github.com/adelavega
+  image_url: https://github.com/adelavega.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+james:
+  name: James Kent
+  title: Postdoctoral Researcher and Technical Lead
+  url: https://github.com/jdkent
+  image_url: https://github.com/jdkent.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+nick:
+  name: Nicholas Lee
+  title: Frontend Engineer
+  url: https://github.com/nicoalee
+  image_url: https://github.com/nicoalee.png

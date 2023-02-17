@@ -96,8 +96,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/neurosynth-compose',
+                label: 'NeuroStars',
+                href: 'https://neurostars.org/tag/neuroscout',
               },
               {
                 label: 'Twitter',
