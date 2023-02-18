@@ -1,3 +1,7 @@
+# Glossary
+
+This page contains a glossary of terms used in Neurosynth-Compose.
+
 ## Studyset
 
 ### Overview
