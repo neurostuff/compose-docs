@@ -39,13 +39,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Change this w/ edit URL
           editUrl:
-            'https://github.com/neurostuff/compose-docs/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/neurostuff/compose-docs/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Change this w/ edit URL
           editUrl:
-            'https://github.com/neurostuff/compose/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/neurostuff/compose-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
