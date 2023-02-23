@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Our Team'
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 # Our Team
