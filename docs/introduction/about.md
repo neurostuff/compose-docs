@@ -1,6 +1,7 @@
 ---
 sidebar_label: 'About Compose'
 sidebar_position: 1
+slug: /
 ---
 
 # What is Neurosynth Compose?

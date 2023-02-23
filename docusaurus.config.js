@@ -41,7 +41,8 @@ const config = {
           editUrl:
             'https://github.com/neurostuff/compose-docs/edit/master/',
           showLastUpdateAuthor: true,
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
