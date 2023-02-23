@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Neurosynth Compose Documentation',
+  title: 'Neurosynth Compose Docs',
   tagline: 'A platform for reproducible neuroimaging meta-analysis',
   favicon: 'img/favicon.ico',
 
@@ -40,6 +40,8 @@ const config = {
           // Change this w/ edit URL
           editUrl:
             'https://github.com/neurostuff/compose-docs/edit/master/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         blog: {
           showReadingTime: true,
@@ -49,7 +51,7 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
+        }
       }),
     ],
   ],
@@ -60,7 +62,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Neurosynth Compose Docs',
+        title: 'Neurosynth Compose',
         logo: {
           alt: 'Neurosynth Compose logo',
           src: 'img/synth.png',
@@ -68,9 +70,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'introduction/about',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -87,8 +89,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/docs/introduction/about',
               },
             ],
           },
