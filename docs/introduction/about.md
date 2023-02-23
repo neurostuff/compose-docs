@@ -19,7 +19,7 @@ slug: /
 ## 🚀 Let's get started! 
 * Check out the [Create your first meta-analysis](./tutorial/first-analysis) tutorial. 
 * You can also read a more detailed guide to the platform in the [User Guide](./user-guide/overview).
-* Learn more about the [Neurosynth Ecosystem](./ecosystem.md) and the [Neurosynth Team](./team.md).`
+* Learn more about the [Neurosynth Ecosystem](./ecosystem) and the [Neurosynth Team](./team).`
 
 ## Getting Help
 
