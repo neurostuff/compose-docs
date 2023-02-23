@@ -17,8 +17,8 @@ slug: /
 * 🔗 **Share** your meta-analysis with the community with complete provenance and reproducibility.
 
 ## 🚀 Let's get started! 
-* Check out the [Create your first meta-analysis](./tutorial/first-analysis.md) tutorial. 
-* You can also read a more detailed guide to the platform in the [User Guide](./user-guide/overview.md).
+* Check out the [Create your first meta-analysis](./tutorial/first-analysis) tutorial. 
+* You can also read a more detailed guide to the platform in the [User Guide](./user-guide/overview).
 * Learn more about the [Neurosynth Ecosystem](./ecosystem.md) and the [Neurosynth Team](./team.md).`
 
 ## Getting Help
