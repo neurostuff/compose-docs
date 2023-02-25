@@ -15,6 +15,10 @@ Neurosynth-Compose is a collaborative effort between several labs around the wor
 
 * Nicholas Lee
 
+* Taylor Salo
+
+* Katie Bottenhorn
+
 * JB Poline
 
 * Angela Laird
@@ -24,3 +28,4 @@ Neurosynth-Compose is a collaborative effort between several labs around the wor
 * Tom Nichols
 
 * Julio Pedraza
+
