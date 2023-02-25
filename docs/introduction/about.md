@@ -19,10 +19,10 @@ slug: /
 ## 🚀 Let's get started! 
 * Check out the [Create your first meta-analysis](./tutorial/first-analysis) tutorial. 
 * You can also read a more detailed guide to the platform in the [User Guide](./user-guide/overview).
-* Learn more about the [Neurosynth Ecosystem](./ecosystem) and the [Neurosynth Team](./team).`
+* Learn more about the [Ecosystem](./introduction/ecosystem) and the [Neurosynth Team](./introduction/team).`
 
 ## Getting Help
 
-* Ask a question on [Neurostars](https://neurostars.org/tag/neurosynth-compose) using the `neurosynth-compose` tag (or `neurosynth` if you're using the legacy platform).
+* Ask a question on [Neurostars](https://neurostars.org/tag/neurosynth-compose) using the `neurosynth-compose` tag.
 * Report a bug or request a feature on [GitHub](https://github.com/neurostuff/neurostore/issues)
 * Help us improve the platform by using the feedback button in the bottom right corner of the page.

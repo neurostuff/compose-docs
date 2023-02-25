@@ -3,43 +3,43 @@ sidebar_label: 'Ecosystem'
 sidebar_position: 2
 ---
 
-# A Unified Meta-Analytic Ecosystem for fMRI Research
+# A Unified Ecosystem for fMRI Meta-Analysis
 
-Neurosynth Compose is part of a broader ecosystem of tools for meta-analytic neuroimaging research, with distinct but complementary roles.
+*Neurosynth Compose* is part of a broader set of tools for neuroimaging meta-analysis, with distinct but complementary roles.
 
 ## Neurosynth Compose
 
-Neurosynth-Compose is the evolution of the original [Neurosynth][https://neurosynth.org] project.
+Neurosynth-Compose is the evolution of the original [Neurosynth](https://neurosynth.org) project.
 
-In the original Neurosynth project, we developed a web platform for users users can browse a large set of pre-computed fMRI meta-analyses
-that synthesize findings across 14,000+ neuroimaging studies. The philosophy behind Neurosynth was to leverage
-large scale meta-analysis to provide new insights into the neuroimaging literature, overcoming limitations and inaccuracies in the database
-with the sheer scale of the database. By regularly collecting new data, Neurosynth was able to scale with the growth of the neuroimaging literature.
-In addition to the web platform, we also publically released the database with an open license, and developed a Python package to manipulate and analyze the data. 
+In *Neurosynth 1.0*, we developed a web platform for users to browse a large set of pre-computed meta-analyses
+synthesizing findings across 14,000+ fMRI studies. The philosophy was to leverage
+large scale meta-analysis to provide new insights into the literature, overcoming limitations of database
+with sheer scale. With regular updates, Neurosynth was able to keep up with the growth of the literature.
+The database was released with a permissive license, and accompanied by aa Python package to manipulate and analyze it. 
 
 Although this approach was surprsingly successful, there were several major limitations to Neurosynth 1.0:
 
-* Meta-analyses are based on the study conceepts that can be inferred from large scale text mining (i.e. frequency of terms in the text).
+* Meta-analyses were limited by **concepts that can be inferred from large scale text mining** (i.e. frequency of terms in the text).
 Although these features proved to be surprsingly useful for well-powered and broad cognitive constructs (e.g. 'emotion'), Neurosynth was not able 
 to capture the fine-grained details of the neuroimaging literature, or allow users to define their own grouping of studies. 
 
-* The database is not curated, and therefore contains many inaccuracies and incomplete data at both the study and coordinate level.
+* The database is not curated, and therefore contains many **inaccuracies and incomplete** data at both the study and coordinate level.
 Aside from obvious extraction erors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
 In addition, it's not possible to segregate the coordinates into distinct contrast, conditions, or studies without manual curation.
 
-* Coordinate-based meta-analysis are inherently inferior to image-based meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][https://neurovault.org].
+* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][https://neurovault.org].
 
 _Neurosynth Compose_ aims to address these limitations:
 
-* Provides a web-based platform for meta-analytic neuroimaging research, allowing users to curate studies, and flexibly specify meta-analytic models in a reproducible and transparent manner. 
+* Provides a web-based platform for meta-analytic neuroimaging research, allowing users to **curate studies**, and **specify meta-analytic models**. 
 
-* Flexible and easy to use, allowing users to perform both large-scale exploratory meta-analyses, as well as targeted, hypothesis-driven meta-analyses that conform to stringent standards such as the [PRISMA][https://prisma-statement.org] statement.
+* **Flexible and easy to use**, allowing users to perform both large-scale **exploratory** meta-analyses, as well as **targeted, hypothesis-driven** meta-analyses that conform to stringent standards such as the [PRISMA][https://prisma-statement.org] statement.
 
-* Allows users to include unthresholded data from NeuroVault (in progress).
+* Allows users to perfom **image-based meta-analysis** using unthresholded images from NeuroVault (in progress).
 
-* Easy, reproducible and transparent sharing of results.
+* Quick, reproducible and transparent **sharing of results**.
 
-* Incentivizes collaborative curation of neuroimaging studies in a centralized and accessible repository (NeuroStore, see below).
+* Incentivizes **collaborative curation** of neuroimaging studies in a accesible **centralized repository** (NeuroStore, see below).
 
 
 ## NeuroStore
