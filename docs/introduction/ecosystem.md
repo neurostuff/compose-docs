@@ -3,9 +3,12 @@ sidebar_label: 'Ecosystem'
 sidebar_position: 2
 ---
 
-# A Unified Ecosystem for fMRI Meta-Analysis
+# Ecosystem for fMRI Meta-Analysis
 
-*Neurosynth Compose* is part of a broader set of tools for neuroimaging meta-analysis, with distinct but complementary roles.
+![ecosystem](/img/compose_ecosystem_paths.svg "Neurosynth Compose Ecosystem")
+
+*Neurosynth Compose* is part of a broader set of tools for neuroimaging meta-analysis, with complementary roles.
+
 
 ## Neurosynth Compose
 
@@ -15,7 +18,7 @@ In *Neurosynth 1.0*, we developed a web platform for users to browse a large set
 synthesizing findings across 14,000+ fMRI studies. The philosophy was to leverage
 large scale meta-analysis to provide new insights into the literature, overcoming limitations of database
 with sheer scale. With regular updates, Neurosynth was able to keep up with the growth of the literature.
-The database was released with a permissive license, and accompanied by aa Python package to manipulate and analyze it. 
+The database was released with a permissive license, and accompanied by a Python package to manipulate and analyze it. 
 
 Although this approach was surprsingly successful, there were several major limitations to Neurosynth 1.0:
 
@@ -27,7 +30,7 @@ to capture the fine-grained details of the neuroimaging literature, or allow use
 Aside from obvious extraction erors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
 In addition, it's not possible to segregate the coordinates into distinct contrast, conditions, or studies without manual curation.
 
-* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][https://neurovault.org].
+* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][].
 
 _Neurosynth Compose_ aims to address these limitations:
 
@@ -44,74 +47,53 @@ _Neurosynth Compose_ aims to address these limitations:
 
 ## NeuroStore
 
-[NeuroStore][] will act as a centralized repository for coordinates and maps from neuroimaging studies, stored in NIMADS format.
+NeuroStore is the centralized repository for neuroimaging data amenable to meta-analysis, including coordinates, images, and metadata.
+NeuroStore serves as the data backend for Neurosynth Compose, but is also designed to be a standalone interoperable resource for the neuroimaging community.
 
-In addition to the database, NeuroStore will provide an API for programmatic querying, as well as a web service with which users
-can contribute to the database.
+NeuroStore ingests data from a number of sources, including NeuroVault, NeuroQuery, and Neurosynth (ACE), and provides a unified API for querying the database.
 
-This repository will version control study information so that users may curate the database,
-correcting any mistakes in study data or metadata (such as incorrectly-extracted coordinates).
-This database curation functionality will fulfill a similar role within the ecosystem to [brainspell][].
-
-NeuroStore will automatically index statistical maps from NeuroVault and ingest newly-extracted coordinates from databases like NeuroQuery.
-
+Importantly, data on NeuroStore can be **curated** the community, allowing users to correct errors in coordinate extraction, and add new studies and coordinates. By providing a centralized repository for curated neuroimaging data, NeuroStore aims to facilitate the development of new meta-analytic tools, and to provide a common data format for the neuroimaging community.
 
 ## NiMARE
 
-[NiMARE][] is a Python package for performing meta-analyses, and derivative analyses using meta-analytic data,
-of the neuroimaging literature.
-While meta-analytic packages exist which implement one or two algorithms each,
-NiMARE provides a standard syntax for performing a wide range of analyses and for interacting with databases of coordinates and images
-from fMRI studies (e.g., brainspell, Neurosynth, and NeuroVault).
+[NiMARE][] (Neuroimaging Meta-Analysis Research Environment) is a Python package for performing neuroimaging meta-analysis. 
 
-NiMARE joins a growing Python ecosystem for neuroimaging research, which includes such tools as [Nipype][], [Nistats][], and [Nilearn][].
-As with these other tools, NiMARE is open source, collaboratively developed, and built with ease of use in mind.
+NiMARE is an open source, collaboratively-developed package that implements a range of meta-analytic algorithms, including coordinate- and image-based meta-analyses, automated annotation, functional decoding, and meta-analytic coactivation modeling. 
 
-NiMARE aims to fill a gap in a burgeoning meta-analytic ecosystem.
-The goal of NiMARE is to collect a wide range of meta-analytic tools in one Python library.
-Currently, those methods are spread out across a range of programming languages and user interfaces,
-or are never even translated from the original papers into useable tools.
-NiMARE operates on NIMADS-format datasets, which users will be able to compile by searching the NeuroStore database with the pyNIMADS library.
-A number of other services in the ecosystem will then use NiMARE functions to perform meta-analyses, including Neurosynth 2.0 and [NeuroVault][].
+By consolidating meta-analytic methods under a common library and syntax, NiMARE makes it straightforward for users to employ the appropriate approach for a given analysis. 
 
+NeuroSynth Compose uses NiMARE to execute meta-analyses, by exporting datasets in the common NIMADS format (see below), and specifying reproducible NiMARE workflows for common meta-analytic models.
+
+### PyMARE
+
+[PyMARE][] is a Python library for effect-size meta-analysis. NiMARE uses PyMARE for its image-based meta-analysis algorithms
+(with some light wrapping to convert image objects to arrays compatible with PyMARE functions).
+
+### NIMADS
+
+[NIMADS][] is a new standard for organizing and representing meta-analytic neuroimaging data.
+NIMADS is used as a common, interoperable format by NeuroStore, pyNIMADS, and NiMARE.
 
 ## NeuroQuery
 
 [NeuroQuery][] is a web service, Python library, and coordinate database built for large-scale, predictive meta-analysis.
 Predictive meta-analysis generates non-statistical brain maps from text, using a database of coordinates and associated texts.
 
-Because the [NeuroQuery database][] is more advanced and accurate than the existing Neurosynth 1.0 database,
+The [NeuroQuery dataset][] is accurate and maintainble than the existing Neurosynth 1.0 database,
 this new database will effectively replace the old one within the meta-analytic ecosystem.
 NiMARE can ingest the NeuroQuery database and convert it automatically to a NiMARE Dataset object for analysis.
 Additionally, the NeuroQuery database will feed directly into NeuroStore as a source of coordinates.
 
-NeuroQuery-generated predictive meta-analyses will be exportable directly to NeuroVault.
-
-
-## NIMADS
-
-[NIMADS][] is a new standard for organizing and representing meta-analytic neuroimaging data.
-NIMADS will be used by NeuroStore, pyNIMADS, and NiMARE.
-
-
 ## NeuroVault
 
-[NeuroVault][] is a database for unthresholded images.
-Users may upload individual maps or [NIDM Results][] packs, which can be exported from a number of fMRI analysis tools,
-like [AFNI][], [SPM][], [FSL][], and [NeuroScout][].
+[NeuroVault][] is a repository for unthresholded statistical maps from neuroimaging studies.
 
-NeuroVault also has integrations with [NeuroPower][] (for power analyses) and [Neurosynth 1.0][] (for functional decoding),
-and supports simple image-based meta-analyses using NiMARE.
+As of early 2023, NeuroVault contains over 8,000 collections of statistical images, with over 100,000 images in total.
+It is the largest repository of unthresholded statistical maps in the world, and is the primary source of data for image-based meta-analyses using 
+Neurosynth Compose.
 
-Additionally, as the ecosystem is built, users will be able to export meta-analysis results from Neurosynth 2.0 or NiMARE,
-as well as predictive meta-analyses from NeuroQuery, directly to NeuroVault.
-
-
-## PyMARE
-
-[PyMARE][] is a Python library for effect-size meta-analysis.
-NiMARE uses PyMARE for its image-based meta-analysis algorithms
-(with some light wrapping to convert image objects to arrays compatible with PyMARE functions).
+Currently, NeuroVault supports some basic meta-analytic functionality. However, as other tools in this ecosystem are developed,
+it is planned that NeuroVault will focus exclusively on image storage and sharing, and will rely on other tools for meta-analysis.
 
 
 <!-- links -->
@@ -125,15 +107,11 @@ NiMARE uses PyMARE for its image-based meta-analysis algorithms
 [metaCurious]: https://github.com/neurostuff/metaCurious
 [NeuroPower]: http://neuropowertools.org
 [NeuroQuery]: https://neuroquery.org
-[NeuroQuery database]: https://github.com/neuroquery/neuroquery_data
+[NeuroQuery dataset]: https://github.com/neuroquery/neuroquery_data
 [NeuroScout]: https://alpha.neuroscout.org
 [NeuroStars]: https://neurostars.org/latest
 [NeuroStore]: https://github.com/neurostuff/neurostore
-[NeuroSynth 1.0]: http://neurosynth.org/
-[NeuroSynth 2.0]: https://github.com/neurostuff/neurosynth-frontend
-[Neurosynth Python package]: https://github.com/neurosynth/neurosynth
 [NeuroVault]: https://neurovault.org/
-[NIDM Results]: http://nidm.nidash.org/specs/nidm-results_130.html
 [Nilearn]: https://nilearn.github.io/
 [NIMADS]: https://github.com/neurostuff/NIMADS
 [NiMARE]: https://nimare.readthedocs.io/en/latest/
