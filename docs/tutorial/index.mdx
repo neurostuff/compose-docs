@@ -1,0 +1,69 @@
+
+# Tutorials
+
+
+import { Grid, Card, CardContent, Typography, Button } from '@mui/material';
+
+import { Link } from 'react-router-dom';
+
+Neurosynth-Compose supports a range of use cases, from a finely controlled *manual-meta analysis* to a fully automated *large-scale meta-analysis*.
+
+
+Below is an overview of three uses cases, with links to tutorials for each one. We recommend starting with the *Automated* tutorial, which is the fastest way to get started.
+
+
+<div style={{ display: 'flex' }}>
+    <Link to="tutorial/large-scale" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
+        <Card style={{ borderRadius: '8px' }}>
+        <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+            Automated
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <em>Fast workflow for exploratory analysis.</em><br/><br/>
+                <ul>
+                    <li>Query studies programmatically at scale</li>
+                    <li>Search using terms, topics or activation coordinates</li>
+                    <li>Replicate results from original Neurosynth</li>
+                    <li>Immediate results, ideal for a exploratory analysis</li>
+                </ul>
+            </Typography>
+        </CardContent>
+        </Card>
+    </Link>
+    <Link to="tutorial/semi-automated" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px',cursor: 'pointer' }}>
+        <Card style={{ borderRadius: '8px' }}>
+        <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+            Semi-Automated
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <em>More precise and customizable, but faster than manual.</em><br/><br/>
+                <ul>
+                    <li>Query NeuroStore to quickly find studies</li>
+                    <li>Manually include/exclude studies to define concept more precisely</li>
+                    <li>Fine-grained selection of analyses/contrasts within each study</li>
+                </ul>
+            </Typography>
+        </CardContent>
+        </Card>
+    </Link>
+    <Link to="tutorial/manual" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
+        <Card style={{ borderRadius: '8px' }}>
+        <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+            Manual
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <em>Most stringent and rigorous.</em><br/><br/>
+                <ul>
+                    <li>Search across multiple sources, such as: PubMed, Web of Science, NeuroStore</li>
+                    <li>Careful manual curation for inclusion/exclusion criteria</li>
+                    <li>Extract coordinates from studies not already indexed</li>
+                    <li>Meets PRISMA reporting guidelines</li>
+                </ul>
+            </Typography>
+        </CardContent>
+        </Card>
+    </Link>
+</div>

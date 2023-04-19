@@ -1,8 +1,13 @@
 ---
-sidebar_label: 'About Compose'
+sidebar_label: 'About Compose!'
 sidebar_position: 1
 slug: /
 ---
+
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 # What is Neurosynth Compose?
 
@@ -16,10 +21,37 @@ slug: /
 * 📊 **Analyze** your meta-analysis by specfying a reproducible [NiMARE](https://readthedocs.org/projects/nimare/) workflow, and execute it locally or in the cloud. 
 * 🔗 **Share** your meta-analysis with the community with complete provenance and reproducibility.
 
-## 🚀 Let's get started! 
-* Check out the [Create your first meta-analysis](./tutorial/semi-automated) tutorial. 
-* You can also read a more detailed guide to the platform in the [User Guide](./guide/overview).
-* Learn more about the [Ecosystem](./introduction/ecosystem) and the [Neurosynth Team](./introduction/team).`
+## Get started! 🚀 
+
+
+<div style={{ display: 'flex' }}>
+  <Card style={{ width: '100%', display: 'flex', marginRight: '50px' }}>
+    <CardContent>
+      <Typography variant="h5" component="h2" gutterBottom>
+        Tutorials
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        Tutorials show you how to use Neurosynth Compose with complete end-to-end examples.
+      </Typography>
+      <Button variant="contained" color="primary" href='tutorials/overview'>
+        Go to Tutorials
+      </Button>
+    </CardContent>
+  </Card>
+  <Card style={{ width: '100%', display: 'flex' }}>
+    <CardContent>
+      <Typography variant="h5" component="h2" gutterBottom>
+        User Guide
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        The User Guide provides a detailed overview of the platform, and explains key concepts and features.
+      </Typography>
+      <Button variant="contained" color="primary" href="guide/overview">
+        Go to User Guide
+      </Button>
+    </CardContent>
+  </Card>
+</div>
 
 ## Getting Help
 
