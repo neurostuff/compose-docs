@@ -23,6 +23,6 @@ slug: /
 
 ## Getting Help
 
-* Ask a question on [Neurostars](https://neurostars.org/tag/neurosynth-compose) using the `neurosynth-compose` tag.
+* Ask a question on [Neurostars](https://neurostars.org/tag/neurosynth-compose) using the `neurosynth-compose` tag. 
 * Report a bug or request a feature on [GitHub](https://github.com/neurostuff/neurostore/issues)
 * Help us improve the platform by using the feedback button in the bottom right corner of the page.
