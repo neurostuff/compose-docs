@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'Large-scale meta-analysis'
-sidebar_position: 2
+sidebar_label: 'Automated Meta-Analysis'
+sidebar_position: 3
 ---
 
-# Exporatory large-scale meta-analysis
+# Exporatory automated large-scale meta-analysis
