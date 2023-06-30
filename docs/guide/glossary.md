@@ -1,3 +1,8 @@
+---
+title: Glossary
+sidebar_position: 1
+---
+
 # Glossary
 
 This page contains a glossary of terms used in Neurosynth-Compose.
@@ -27,11 +32,11 @@ Annotations serve three functions:
 3. Filtering Analyses for inclusion in the meta-analysis
 
 Annotations can be thought of like an excel sheet, where
-the columns are variables serving one of the three functions above
-and each analysis has value for that variable.
-For example, an "include" column may have a value of "True" or "False"
-for each analysis indicating whether to include the analysis in the
-meta-analysis.
+the columns are variables serving one of the three functions mentioned above, and the rows are 
+each analysis and its value for that variable.
+For example, let's say we were to create an annotation for purpose (3). To filter analyses for inclusion, we can create 
+an "include" column may have a corresponding values of "True" or "False"
+for each analysis indicating whether to include the analysis in the meta-analysis.
 
 ### Functions
 
@@ -43,8 +48,8 @@ you do not own and want to edit it.
 ### Overview
 
 A study is a publishable unit of research containing neuroimaging
-data. 
-The data can be represented as peak coordinates or the actual images.
+data.
+The data can be represented as peak coordinates or actual images.
 The study is connected to the original journal it was published in.
 
 ### Functions
@@ -66,8 +71,11 @@ indicating significant results
 ### Overview
 
 A condition is term/word that represents a psychological (e.g., 2-back), physical (e.g., biking)
+
 ## Weights
 
 ## Point
+
+### Overview
 
 ## Image
