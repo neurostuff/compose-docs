@@ -5,8 +5,9 @@ sidebar_position: 0
 
 # Curation
 
-*Curation* is the first step in creating a meta-analysis, and begins by *searching* for and *importing* studies into the project. Next, you will *review* studies for inclusion based on their relevancy to your research question. This involves **excluding** irrelevant studies, and **including** relevant ones. At the end of the process, you will be ready to create a StudySet of related studies that are amenable for neuroimaging meta-analysis
+*Curation* is the first step in creating a meta-analysis, and begins by *searching* for and *importing* studies into the project. Next, you will *review* studies for inclusion based on their relevancy to your research question. This involves **excluding** irrelevant studies, and **including** relevant ones. 
 
+At the end of the process, you will be ready to create a [**studyset**](/compose-docs/guide/glossary#studyset) of related studies that are amenable for neuroimaging meta-analysis
 
 ## Getting Started
 
@@ -109,12 +110,12 @@ If your collection has more than 1,500 PMIDs, split the import into multiple fil
 
 Use this option to import studies via a .bib, .RIS, or .enw file. This may be useful if you want to import from a citation manager like Zotero.
 
-### Create Custom Study
+### Custom Studies
 
 If there is any record that cannot be easily imported using one of the methods listed above, you can also manually create a study. This may be necessary 
 to include resources like unpublished studies.
 
-### Handling Duplicates
+### Duplicates
 
 If duplicates are detected in your import, you will be asked how to re-concile them by choosing which of the studies to keep by choosing "KEEP THIS STUDY". Matching duplicates will be automatically marked for exclusion. Note that as a user, you can over-ride any of these selection at any time, and choose which studies to keep or exclude. 
 
@@ -162,7 +163,7 @@ If a study meets inclusion critera (for the current phase), click **PROMOTE** to
 For the first column (especially in a PRISMA workflow) it can be tedious to promote non-duplicates to the next column. If all duplicates have been resolved, you can exit the dialog and click **PROMOTE ALL UNCATEGORIZED STUDIES** to advance all non-duplicate studies to the next column.
 :::
 
-## Move to Extraction
+## On to Extraction
 
 When you have categorized all imported studies by either excluding them or moving them to the inclusion column, then you have 
 successfully completed the curation portion of the meta-analysis.
