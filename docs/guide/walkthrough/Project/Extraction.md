@@ -6,7 +6,7 @@ sidebar_position: 0
 # Extraction
 
 Extraction is the second step in creating a meta-analysis. It involves taking the 
-new [**studyset**](/compose-docs/guide/glossary#studyset) creates in the curation step and extracting relevant information from studies, such as [**annotations**](/compose-docs/guide/glossary#annotation), 
+new [**Studyset**](/compose-docs/guide/glossary#studyset) creates in the curation step and extracting relevant information from studies, such as [**annotations**](/compose-docs/guide/glossary#annotation), 
 and peak activation coordinates, or [**points**](/compose-docs/guide/glossary#point).
 
 ## Getting Started
