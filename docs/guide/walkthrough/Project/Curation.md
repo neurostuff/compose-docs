@@ -151,7 +151,7 @@ typing to create a new one.
 
 :::tip
 For the PRISMA workflow, the default exclusion reason wil depend on the phase you are in (identification vs screening vs eligibility), to match the PRISMA guidelines. While we do not recommend it, you can click the arrow button and start typing in the input to create a new exclusion reason.
-Revisit the [PRISMA workflow](/compose-docs/guide/pages/Project/Curation#prisma-workflow) to review reccomended exclusion criteria.
+Revisit the [PRISMA workflow](./Curation#prisma-workflow) to review reccomended exclusion criteria.
 :::
 
 
@@ -168,4 +168,4 @@ For the first column (especially in a PRISMA workflow) it can be tedious to prom
 When you have categorized all imported studies by either excluding them or moving them to the inclusion column, then you have 
 successfully completed the curation portion of the meta-analysis.
 
-*Neurosynth Compose* will detect this and reveal a new button: **MOVE TO EXTRACTION PHASE**. This will move you back to the project page and get you started on the next major component to building your meta-analysis: [extraction](../Project/Extraction).
+*Neurosynth Compose* will detect this and reveal a new button: **MOVE TO EXTRACTION PHASE**. This will move you back to the project page and get you started on the next major component to building your meta-analysis: [extraction](./Extraction).
