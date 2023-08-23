@@ -5,19 +5,17 @@ sidebar_position: 0
 
 # Extraction
 
-## Introduction
+Extraction is the second step in creating a meta-analysis. It involves taking the 
+new [**Studyset**](/compose-docs/guide/glossary#studyset) creates in the curation step and extracting relevant information from studies, such as [**annotations**](/compose-docs/guide/glossary#annotation), 
+and peak activation coordinates, or [**points**](/compose-docs/guide/glossary#point).
 
-The extraction phase is the second step when creating a meta-analysis. It involves taking the 
-new [**studyset**](/compose-docs/guide/glossary#studyset) that has been curated during the previous phase 
-and going through the papers, extracting relevant information like [**annotations**](/compose-docs/guide/glossary#annotation), 
-relevant **metadata**, and [**points**](/compose-docs/guide/glossary#point).
+## Getting Started
+After the curation phase is complete, the user is redirected to the extraction phase. You can also access the Extraction phase through the main project page. 
 
-## Getting Started with Extraction
-
-Right after the curation phase is complete, the user is redirected to the project page. Here, the extraction phase starts when 
+Here, the extraction phase starts when 
 a wizard that pops up and guides the user through the process of initializing the extraction phase. On top of creating the 
-initial [**annotation columns**](/compose-docs/guide/pages/Project/Extraction#annotations), this wizard also guides the user through the
-process of [**ingestion** ](/compose-docs/guide/pages/Project/Extraction#ingestion) of the curated studies to create a new [**studyset**](/compose-docs/guide/glossary#studyset).
+initial [**annotation columns**](./Extraction#annotations), this wizard also guides the user through the
+process of [**ingestion** ](./Extraction#ingestion) of the curated studies to create a new [**studyset**](../../glossary#studyset).
 
 ## Ingestion
 
