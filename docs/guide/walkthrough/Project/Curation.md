@@ -64,11 +64,6 @@ If you want to create a [semi-automated meta-analysis](/compose-docs/tutorial/se
 
 This workflow is initalized with only two columns. As before, the left most column is where studies will be placed when they are imported. However, unlike a full PRISMA workflow, all exclusion occurs in this column. All studies not excluded are then promoted to the right most column for inclusion into the meta-analysis.
 
-### Custom Workflow
-
-For any custom workflows not supported by existing options, you can select this option to manually set the number of 
-curation columns. The left most column will still be where imported studies are placed into, and the right most column will remain the inclusion column.
-
 ## Importing
 
 To begin importing studies into your project clicking the  **IMPORT STUDIES** button.
