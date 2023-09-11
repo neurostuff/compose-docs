@@ -9,7 +9,19 @@ The input supports `AND`, `OR`, and `NOT` operations.
 
 For example to use the `AND` operator, you can enter in a value like `nicotine and memory`. Similarly, you can enter an input like `smoking or nicotine` for the `OR` operator, and `smoking -marijuana` for the `NOT` operator (where marijuana is the excluded term).
 
-In order to ensure that text is grouped together (i.e. one word follows the other) you can include the words in parentheses. For example, the search `"anterior insula"` will only yield results where the word "anterior" is followed by the word "insula". You can then use the above search operators on grouped words: `smokers -"anterior insula"`
+In order to ensure that text is grouped together (i.e. one word follows the other) you can include the words in quotes. For example, the search `"anterior insula"` will only yield results where the word "anterior" is followed by the word "insula". You can then use the above search operators on grouped words: `smokers -"anterior insula"`
+
+:::caution
+PostgreSQL's search treats the `OR` operator as a union between multiple different search groups. This means that for more complicated queries, you will need to repeat
+certain `AND` or `NOT` operators amongst multiple clauses.
+
+For example, consider the search: `nicotine OR smoking -marijuana`.
+In this example, the search results returned to you will be all the results yielded from `nicotine` unioned with all the results of `smoking -marijuana`. Having `-marijuana` here does not relate to the entire search term - just `smoking`.
+
+To ensure that you do not have any mention of marijuana in your returned papers, you must search: `nicotine -marijuana or smoking -marijuana`.
+
+The same case applies for `AND` operations. In general, `OR` unions between various search groups consisting of `and`, `not`, and quoted search terms. 
+:::
 
 ### Study Data Type
 
