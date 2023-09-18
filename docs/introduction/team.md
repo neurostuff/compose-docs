@@ -5,27 +5,31 @@ sidebar_position: 4
 
 # Our Team
 
-Neurosynth-Compose is a collaborative effort between several labs around the world and is supported by the [National Institute of Mental Health](http://www.nimh.nih.gov/) award 5R01MH096906-06.
+Neurosynth-Compose is collaborative effoert across several laboratories, and is supported by the [National Institute of Mental Health](http://www.nimh.nih.gov/) award 5R01MH096906.
+Together, we developed the Neurosynth-Compose platform, and critical related tools and infrastructure, such as NiMARE and Neurostore.
 
-## Current Members
+## Members
 
-* Alejandro de la Vega
+* Alejandro de la Vega, Principal Investigator, University of Texas at Austin
 
-* James Kent
+* James Kent, Postdoctoral Fellow & Principal Engineer, University of Texas at Austin
 
-* Nicholas Lee
+* Nicholas Lee, Frontend Engineer, McGill University
 
-* Taylor Salo
+* Taylor Salo, Postdoctoral fellow, University of Pennsylvania
 
-* Katie Bottenhorn
+* Katie Bottenhorn, Postdoctoral Fellow, University of Southern California
 
-* JB Poline
+* Jean-Baptiste Poline, Associate Professor, McGill University
 
-* Angela Laird
+* Angela Laird, Professor, Florida International University
 
-* Russ Poldrack
+* Julio Pedraza, Graduate Student, Florida International University
+ 
+* Russ Poldrack, Professor, Stanford University
 
-* Tom Nichols
+* Tom Nichols, Professor, Oxford University
 
-* Julio Pedraza
+* Yifan Yu, Graduate Student, Oxford University
+
 
