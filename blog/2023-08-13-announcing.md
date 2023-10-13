@@ -1,6 +1,6 @@
 ---
-slug: first-blog-post
-title: First Blog Post
+slug: announcing-ns-compose
+title: Announcing Neurosynth Compose!
 authors: alejandro
 tags: [hello, neurosynth]
 ---
