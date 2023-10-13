@@ -33,8 +33,7 @@ PRISMA stands for the **Preferred Reporting Items for Systematic Review and Meta
 [PRISMA guidelines](http://www.prisma-statement.org/?AspxAutoDetectCookieSupport=1) are a set of rules for reporting a 
 systematic review, and are the gold standard for producing a proper, rigorous, and transparent meta-analysis.
 
-If you are trying to create a rigorous [manual meta-analysis](/compose-docs/tutorial/manual), or if you are trying to create a
-[PRISMA compliant semi-automated meta-analysis](/compose-docs/tutorial/semi-automated), you will want to select this option.
+If you are trying to create a rigorous [PRISMA compliant manual meta-analysis](/compose-docs/tutorial/manual) you will want to select this option.
 
 When you select this option, neurosynth-compose will automatically initialize the curation step with 4 distinct columns as
 dictated by PRISMA guidelines: **Identification, Screening, Eligibility, Included**.
@@ -60,7 +59,7 @@ For more information, consult the [PRISMA guidelines](http://www.prisma-statemen
 
 ### Simple Workflow
 
-If you want to create a [semi-automated meta-analysis](/compose-docs/tutorial/semi-automated) (i.e. perform manual review on a large-scale study search), you'll want to select this option.
+If you want to create a semi-automated meta-analysis (i.e. perform manual review on a large-scale study search), you'll want to select this option.
 
 This workflow is initalized with only two columns. As before, the left most column is where studies will be placed when they are imported. However, unlike a full PRISMA workflow, all exclusion occurs in this column. All studies not excluded are then promoted to the right most column for inclusion into the meta-analysis.
 
