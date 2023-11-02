@@ -20,17 +20,17 @@ large scale meta-analysis to provide new insights into the literature, overcomin
 with sheer scale. With regular updates, Neurosynth was able to keep up with the growth of the literature.
 The database was released with a permissive license, and accompanied by a Python package to manipulate and analyze it. 
 
-Although this approach was surprsingly successful, there were several major limitations to Neurosynth 1.0:
+Although this approach was surprisingly successful, there were several major limitations to Neurosynth 1.0:
 
 * Meta-analyses were limited by **concepts that can be inferred from large scale text mining** (i.e. frequency of terms in the text).
-Although these features proved to be surprsingly useful for well-powered and broad cognitive constructs (e.g. 'emotion'), Neurosynth was not able 
+Although these features proved to be surprisingly useful for well-powered and broad cognitive constructs (e.g. 'emotion'), Neurosynth was not able 
 to capture the fine-grained details of the neuroimaging literature, or allow users to define their own grouping of studies. 
 
 * The database is not curated, and therefore contains many **inaccuracies and incomplete** data at both the study and coordinate level.
-Aside from obvious extraction erors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
+Aside from obvious extraction errors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
 In addition, it's not possible to segregate the coordinates into distinct contrast, conditions, or studies without manual curation.
 
-* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][].
+* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statistical maps in repositories like [NeuroVault][].
 
 _Neurosynth Compose_ aims to address these limitations:
 
