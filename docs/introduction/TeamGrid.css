@@ -1,0 +1,33 @@
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-member-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-member-image {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.description {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.github-link {
+    display: inline-block;
+    color: #333; /* GitHub icon color */
+  }
+  
+.github-link:hover {
+color: #6cc644; /* GitHub brand color on hover */
+}
