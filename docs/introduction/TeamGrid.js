@@ -94,7 +94,7 @@ const TeamMemberCard = ({ name, title, affiliation, imageUrl, websiteUrl, github
         title: 'Graduate Student',
         affiliation: 'Florida International University',
         imageUrl: useBaseUrl('team/pedraza.jpg'),
-        githubProfile: 'https://github./julioAPeraza'
+        githubProfile: 'https://github.com/julioAPeraza'
       },
       {
         id: 9,
@@ -103,7 +103,7 @@ const TeamMemberCard = ({ name, title, affiliation, imageUrl, websiteUrl, github
         affiliation: 'Stanford University',
         imageUrl: useBaseUrl('team/poldrack.jpg'),
         websiteUrl: 'http://poldracklab.org/',
-        githubProfile: 'https://github./poldrack'
+        githubProfile: 'https://github.com/poldrack'
 
       },
       {
@@ -120,7 +120,7 @@ const TeamMemberCard = ({ name, title, affiliation, imageUrl, websiteUrl, github
         title: 'Graduate Student',
         affiliation: 'Oxford University',
         imageUrl: useBaseUrl('team/yu.jpg'),
-        githubProfile: 'https://github./yifan0330'
+        githubProfile: 'https://github.com/yifan0330'
       }
     ];
 
