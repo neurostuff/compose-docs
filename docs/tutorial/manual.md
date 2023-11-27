@@ -98,7 +98,7 @@ Next, we save the results to `PMID` format, with a PubMed ID on each line.
 
 :::info   
 Reviewing 3,000 studies can take a long time! 
-Only a small percentage of these studies will meet all inclusion criteria. For the sake of the tutorial, we provide a shortened list of <FaDownload size={20} /> [PUBMED IDS](tutorial_pmids.txt).
+Only a small percentage of these studies will meet all inclusion criteria. For the sake of the tutorial, we provide a shortened list of <FaDownload size={20} /> [PUBMED IDS](/tutorial/tutorial_pmids.txt).
 :::
 
 We can import this file into our Project by clicking **Upload File**. Give this import a name for future reference.
