@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Ecosystem'
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Ecosystem for fMRI Meta-Analysis

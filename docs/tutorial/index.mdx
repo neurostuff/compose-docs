@@ -6,31 +6,12 @@ import { Grid, Card, CardContent, Typography, Button } from '@mui/material';
 
 import { Link } from 'react-router-dom';
 
-Neurosynth-Compose supports a range of use cases, from a finely controlled *manual-meta analysis* to a fully automated *large-scale meta-analysis*.
+Neurosynth Compose supports a range of different workflows, from exploratory large-scale automated analyses to highly curated and rigorous manual analyses.
 
-
-Below is an overview of three uses cases, with links to tutorials for each one. 
-
+The choice of workflow depends on the research question and the available resources. Note that you can choose to blend approaches from these two 
+ends of the spectrum, depending on your needs. Learn more about the different workflows by following the tutorials below.
 
 <div style={{ display: 'flex' }}>
-    <Link to="tutorial/large-scale" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
-        <Card style={{ borderRadius: '8px' }}>
-        <CardContent>
-            <Typography variant="h5" component="h2" gutterBottom>
-            Automated
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-            <em>Fast exploratory analysis.</em><br/><br/>
-                <ul>
-                    <li>Query studies at scale</li>
-                    <li>Search using terms, topics or activation coordinates</li>
-                    <li>Replicate results from original Neurosynth</li>
-                    <li>Immediate results, ideal for a exploratory analysis</li>
-                </ul>
-            </Typography>
-        </CardContent>
-        </Card>
-    </Link>
     <Link to="tutorial/manual" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
         <Card style={{ borderRadius: '8px' }}>
         <CardContent>
@@ -44,6 +25,24 @@ Below is an overview of three uses cases, with links to tutorials for each one.
                     <li>Careful curation for inclusion/exclusion criteria</li>
                     <li>Extract coordinates from studies not already indexed</li>
                     <li>Meets PRISMA guidelines</li>
+                </ul>
+            </Typography>
+        </CardContent>
+        </Card>
+    </Link>
+    <Link to="tutorial/automated" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
+        <Card style={{ borderRadius: '8px' }}>
+        <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+            Automated
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <em>Fast exploratory analysis.</em><br/><br/>
+                <ul>
+                    <li>Query studies at scale</li>
+                    <li>Search using terms, topics or activation coordinates</li>
+                    <li>Replicate results from original Neurosynth</li>
+                    <li>Immediate results, ideal for a exploratory analysis</li>
                 </ul>
             </Typography>
         </CardContent>
