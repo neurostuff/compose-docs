@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkns_compose_docs=self.webpackChunkns_compose_docs||[]).push([[868],{4211:o=>{o.exports=JSON.parse('{"permalink":"/compose-docs/blog/tags/neurosynth","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
