@@ -1,3 +1,8 @@
+---
+sidebar_label: 'Manual Meta-Analysis'
+sidebar_position: 2
+---
+
 # Manual Meta-Analysis
 
 import { Card, CardContent, Typography, Button } from '@mui/material';
