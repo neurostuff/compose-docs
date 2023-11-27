@@ -27,9 +27,6 @@ For more guidance on how to choose a topic for meta-analysis, see the [PRISMA st
 We'll step through this process in detail.
 
 To get started, *sign in*, and select **New Project**. 
-Give your project a *Name* and a *Description*. You can always change these later.
-
-![Description](/tutorial/create_project.png)
 
 You'll now see the Project page, showing the three stages of a meta-analysis: 
 **Search & Curate, Extract & Annotate** and **Specify Meta-Analyses**.
@@ -227,17 +224,16 @@ Click on any Study to edit:
 
 Let's start by editing a Study's Analyses.
 
-*Analyses* are results reported in a given study from a specific analysis. You may know this as "Contrasts". 
-
-For new studies, we will not have any data, and it is necessary to manually enter these data from the text of a study. 
-
-![Extraction study view](/tutorial/study_with_no_analyses.png)
-
-For studies with no data, you can create new Analyses, and input the Coordinates reported in the text:
-
 ![Extraction study view](/tutorial/add_coordinates.png)
 
-Fortunately, for studies already indexed by NeuroStore, we will already have pre-extracted Coordinates. You can use this same interface to verify and correct these data. 
+:::info
+*Analyses* are groups of images or coordinates reported in a given study fir a specific analysis. This is often referred to as "Contrasts", but we use the more general term "Analyses" to accomodate a wider range of fMRI models. 
+:::
+
+For new studies, we will not have any data, and it is necessary to manually enter these data from the text of a study. 
+We can create a new Analysis for each group of Coordinates, and input the data from the text:
+
+For studies already indexed by NeuroStore, we will already have pre-extracted Coordinates. You can use this same interface to verify and correct these data. 
 
 :::caution   
 Automatically extracted coordinates can contain a number of errors. Mostly commonly, several distinct Analyses (i.e. contrasts), will get grouped into a single Analyses. You will want to create new Analyses to split up the Coordinates into distinct units. 
