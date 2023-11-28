@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkns_compose_docs=self.webpackChunkns_compose_docs||[]).push([[687],{2575:o=>{o.exports=JSON.parse('[{"label":"hello","permalink":"/compose-docs/blog/tags/hello","count":1},{"label":"neurosynth","permalink":"/compose-docs/blog/tags/neurosynth","count":1}]')}}]);

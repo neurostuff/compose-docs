@@ -4,10 +4,23 @@
         <title>Neurosynth Compose Docs Blog</title>
         <link>https://neurostuff.github.io/compose-docs/blog</link>
         <description>Neurosynth Compose Docs Blog</description>
-        <lastBuildDate>Sun, 13 Aug 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Nov 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[New tutorials and updates]]></title>
+            <link>https://neurostuff.github.io/compose-docs/blog/tutorials-updates</link>
+            <guid>https://neurostuff.github.io/compose-docs/blog/tutorials-updates</guid>
+            <pubDate>Tue, 28 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dear Neurosynth Community,]]></description>
+            <content:encoded><![CDATA[<p>Dear Neurosynth Community,</p><p>I'm excited to announce important updates to <em>Neurosynth Compose</em>: A free and open platform for neuroimaging meta-analysis.</p><p>First, we have added some easy to follow <a href="https://neurostuff.github.io/compose-docs/tutorial" target="_blank" rel="noopener noreferrer">tutorials</a> to our documentation, making it easy to become familiar with our platform. </p><p>The tutorials cover two main uses cases we support: Manual and Automated Meta-analyses. Our platform make gold-standard <em>manual</em> meta-analyses much easier, by leveraging pre-extracted imaging data
+and streamline user interfaces. Automated meta-analyses are ideal for generating exploratory results rapidly, enabling meta-analysis as part of routine scientific practice.  </p><p>We've also made many small but important updates to our platform, including significant performance updates and improvements to the user interface.
+<em>Neurosynth Compose</em> is now more intuitive and easier to use. Give it a try by following our <a href="https://neurostuff.github.io/compose-docs/tutorial/manual" target="_blank" rel="noopener noreferrer">manual meta-analysis tutorial</a>. </p><p>We also have some exciting new features in the pipeline that we'll release in early 2024 including:</p><ul><li>Image-based Meta-Analysis (IBMA). Soon, you will be able to use NeuroVault data as inputs for IBMA-- a more powerful and sensitive alternative to Coordinate Based Meta-Analysis.</li><li>Advanced data extraction using Large Language Models (GPT). Early protypes to extract detailed information (such as participant demographics) from neuroimaging articles using LLMs
+have shown promise. We are working on incorporating these workflows into <em>Neurosynth Compose</em>, making it even easier to identify relevant studies for meta-analysis.</li></ul><p>We look forward to your feedback!</p><p>-Alejandro</p>]]></content:encoded>
+            <category>hello</category>
+            <category>neurosynth</category>
+        </item>
         <item>
             <title><![CDATA[Announcing Neurosynth Compose!]]></title>
             <link>https://neurostuff.github.io/compose-docs/blog/announcing-ns-compose</link>
