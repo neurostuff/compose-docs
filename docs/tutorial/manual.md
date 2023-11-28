@@ -13,10 +13,8 @@ This is a condensed adaptation of a course taught at OHBM 2023.
 See the [course materials](https://neurostuff.github.io/meta-analysis-book/ohbm_course_intro.html) for a complete overview.
 :::
 
-In this tutorial, we demonstrate how to create a custom, manual meta-analysis. 
-
 *Neurosynth Compose* provides a streamlined workflow to facilitate study selection and 
-data extraction. You can then easily specify a meta-analysis and execute it in the cloud, 
+data extraction. You can then easily specify a high-quality manual meta-analysis and execute it in the cloud, 
 rapidly generating results that you can inspect and share.
 
 :::tip
