@@ -21,7 +21,7 @@ Surprisingly, this works! For example, by meta-analyzing all studies that mentio
 
 ### Flexible automated meta-analysis in Neurosynth Compose
 
-Although automated meta-analyses have proved to be a useful tool, there are several limitations. The overal goal of *Neurosynth Compose* is to give users a flexible data curation platform, to overcome these limitations using their expert knowledge. For example:
+Although automated meta-analyses have proved to be a useful tool, there are several limitations. The overall goal of *Neurosynth Compose* is to give users a flexible data curation platform, to overcome these limitations using their expert knowledge. For example:
  
 - *Flexible selection criteria.* The original Neurosynth has a fixed number of terms and meta-analyses. With*Neurosynth Compose* you can flexibly search the NeuroStore database using a powerful and flexible search to  precisely define your search criteria. 
  - *Combine expert knowledge with automated selection.* Automated study selection is inherently an noisy and imperfect measure. With *Neurosynth Compose*, you can use automated study selection as a first pass, and later apply your own expert criteria to refine study inclusion criteria. 
@@ -29,11 +29,11 @@ Although automated meta-analyses have proved to be a useful tool, there are seve
 
 ## Tutorial
 
-An automated meta-analysis in *Neurosynth Compose* looks a lot like a manual one, except  data curation is optional. We reccomend following the [manual meta-analysis](manual.md) tutorial to learn in depth about our platform.
+An automated meta-analysis in *Neurosynth Compose* looks a lot like a manual one, except  data curation is optional. We reccomeend following the [manual meta-analysis](manual.md) tutorial to learn in depth about our platform.
 
 ### Search & Curate
 
-One of the main differences between a *manual* and *automated* meta-analysis, is the steps required to select studies. As such, we reccomend selecting the "Simple" curation workflow, which only consists of a single data curation step (which is optional). 
+One of the main differences between a *manual* and *automated* meta-analysis, is the steps required to select studies. As such, we reccomeend selecting the "Simple" curation workflow, which only consists of a single data curation step (which is optional). 
 
 ![Simple Workflow](/tutorial/automated_workflow.png). 
 
@@ -47,7 +47,7 @@ Let's add studies to our curation board by clicking **Import Studies**.
 In an automated meta-analysis, you'll want to select *Import via NeuroStore*, as all indexed studies are guaranteed to contain imaging data (saving you from manual data extraction).
 
 :::caution
-Although the NeuroStore database is continously growing, it is necessarily an incomplete snapshot of the neuroimaging literature
+Although the NeuroStore database is continuously growing, it is necessarily an incomplete snapshot of the neuroimaging literature
 :::
 
 Input any search term to narrow down studies. This will search the Title and Abstract fields. You may also add additional search filters using the **+ Add Filter** button, and *select the desired modality of the imaging data*. 
@@ -78,14 +78,14 @@ At this point, you will create a StudySet containing all of your Studies. Advanc
 
 The goal of this phase is to add or correct imaging data (e.g. Coordinates) in imported studies, and create Annotations to determine which Analyses (e.g. Contrasts), should be included in your meta-analysis.
 
-Since we are perfomring a manual meta-analysis, we're going to skip these steps!
+Since we are performing a manual meta-analysis, we're going to skip these steps!
 
 From the main *Project* page, we can click "Mark All as Complete".
 
 ![Skip Extraction](/tutorial/automated_skip_extraction.png). 
 
 :::tip
-It's up to you if you want to skip this step. The validity of your meta-analysis is highly dependant on input data, so we only reccomend skipping all curation for exploratory analyses.
+It's up to you if you want to skip this step. The validity of your meta-analysis is highly dependant on input data, so we only recommend skipping all curation for exploratory analyses.
 :::
 
 ### Specify Meta-Analyses

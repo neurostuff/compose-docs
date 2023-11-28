@@ -69,7 +69,7 @@ studies that are relevant to your research question. These steps should be compl
 
 But first, we must add studies to our Project.  Click the **Import Studies** button. 
 
-You can search for studies within the *NeuroStore* database—which we maintain and indexes over 20,000 pre-processed neuroimaging studies—or from external sources, such as PubMed or a Ciation manager file. 
+You can search for studies within the *NeuroStore* database—which we maintain and indexes over 20,000 pre-processed neuroimaging studies—or from external sources, such as PubMed or a Citation manager file. 
 
 ![Import Studies](/tutorial/import_studies_options.png). 
 
@@ -151,7 +151,7 @@ You will need to read the **full text** to make this determination.
 :::note
 The eligibility criteria depends on your research question! 
 This is where your expertise is most necessary, in order to create an interesting research question, 
-and filter studies accordingly. The results of this step depends on the researcher, and there may be reasonable scientific disagrements.
+and filter studies accordingly. The results of this step depends on the researcher, and there may be reasonable scientific disagreements.
 :::
 
 To begin, click on the "Eligibility" column header, or a study, as before.
@@ -232,7 +232,7 @@ Let's start by editing a Study's Analyses.
 ![Extraction study view](/tutorial/add_coordinates.png)
 
 :::info
-*Analyses* are groups of images or coordinates reported in a given study fir a specific analysis. This is often referred to as "Contrasts", but we use the more general term "Analyses" to accomodate a wider range of fMRI models. 
+*Analyses* are groups of images or coordinates reported in a given study fir a specific analysis. This is often referred to as "Contrasts", but we use the more general term "Analyses" to accommodate a wider range of fMRI models. 
 :::
 
 For new studies, we will not have any data, and it is necessary to manually enter these data from the text of a study. 
@@ -263,7 +263,7 @@ You can modify this Annotation to select the relevant Analyses of interest to yo
 
 For this replication, we are interested in the effects of nAChR agonists on the brain, which can either be excitatory or inhibitory, so we add both an “activation” and “deactivation” column. 
 
-First create an Annotation. From the main Extraction page, click "View Annoations" on the top right. Here you can view all annotations and the value for each Analyses, as well as create new Annotations. You can choose the data type of each column as either a Number, String, or Boolean. Selected a Boolean data type for the “activation” and “deactivation” columns, which will allow you to filter the analyses by whether they are excitatory or inhibitory. By default you will have an “include” column to help get you started.
+First create an Annotation. From the main Extraction page, click "View Annotations" on the top right. Here you can view all annotations and the value for each Analyses, as well as create new Annotations. You can choose the data type of each column as either a Number, String, or Boolean. Selected a Boolean data type for the “activation” and “deactivation” columns, which will allow you to filter the analyses by whether they are excitatory or inhibitory. By default you will have an “include” column to help get you started.
 
 Below, I am creating a new Annotation for "deactivations"
 
@@ -291,8 +291,8 @@ Next, you will **select a meta-analysis Algorithm and Corrector**:
 
 ![Meta-analysis algorithm](/tutorial/ma_algorithm.png)
 
-A variety of common meta-analysis algirithms such as "ALE" and "MKDA" are available, as well as two
-strategies for controling for multiple comparisons: FDR (false detection rate) and FWE (family wise error).
+A variety of common meta-analysis algorithms such as "ALE" and "MKDA" are available, as well as two
+strategies for controlling for multiple comparisons: FDR (false detection rate) and FWE (family wise error).
 
 For this example, we'll choose "MKDADensity" and and "FDRCorrection". You can modify the parameters for each, if you want,
 but we provide sane defaults for all. 
