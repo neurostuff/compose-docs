@@ -121,6 +121,14 @@ const TeamMemberCard = ({ name, title, affiliation, imageUrl, websiteUrl, github
         affiliation: 'Oxford University',
         imageUrl: useBaseUrl('team/yu.jpg'),
         githubProfile: 'https://github.com/yifan0330'
+      },
+      {
+        id: 12,
+        name: 'Kendra Oudyk',
+        title: 'Graduate Student',
+        affiliation: 'McGill University',
+        imageUrl: useBaseUrl('team/oudyk.jpg'),
+        githubProfile: 'https://github.com/koudyk'
       }
     ];
 
