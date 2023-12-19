@@ -138,7 +138,7 @@ and Abstract of each.
 To begin, click on the Screening column header from the main Curation board. The interface is 
 identical to the previous phase, except the default Exclusion reason is now **irrelevant**. 
 
-Go ahead and review all 13 studies to determine if they are relevant to the topic of *"Nicotime administration*". 
+Go ahead and review all 13 studies to determine if they are relevant to the topic of *"Nicotine administration*". 
 Any studies that are not relevant will remain in this column and not advance.
 
 ### Eligibility
