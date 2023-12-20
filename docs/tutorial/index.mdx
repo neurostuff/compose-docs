@@ -5,11 +5,15 @@
 import { Grid, Card, CardContent, Typography, Button } from '@mui/material';
 
 import { Link } from 'react-router-dom';
+import DocCardList from '@theme/DocCardList';
 
-Neurosynth Compose supports a range of different workflows, from exploratory large-scale automated analyses to highly curated and rigorous manual analyses.
+### Overview
 
-The choice of workflow depends on the research question and the available resources. Note that you can choose to blend approaches from these two 
-ends of the spectrum, depending on your needs. Learn more about the different workflows by following the tutorials below.
+Neurosynth Compose supports a range of different workflows, 
+from exploratory large-scale automated analyses to highly curated and rigorous manual analyses.
+
+The choice of workflow depends on your research question and resources available for study curation.
+We reccomend starting with the **manual meta-analysis** tutorial if you are new.
 
 <div style={{ display: 'flex' }}>
     <Link to="tutorial/manual" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
@@ -49,3 +53,9 @@ ends of the spectrum, depending on your needs. Learn more about the different wo
         </Card>
     </Link>
 </div>
+
+
+### All tutorials
+Select a tutorial to get started.
+
+<DocCardList/>

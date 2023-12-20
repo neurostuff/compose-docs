@@ -4,6 +4,7 @@ sidebar_position: 3
 ---
 
 # Automated Meta-Analysis
+*How to create a fully automated meta-analysis*
 
 :::caution
 This tutorial, and the functionality for automated meta-analysis, is under construction.
