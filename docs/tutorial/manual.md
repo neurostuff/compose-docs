@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Manual Meta-Analysis'
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Manual Meta-Analysis
