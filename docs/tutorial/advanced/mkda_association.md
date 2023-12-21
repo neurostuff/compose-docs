@@ -23,16 +23,16 @@ Thus, perhaps a more useful question is if and where brain activity occurs *more
 
 In our example we want to know if and where studies of nicotine administration show more consistent brain activiation, than *all other studies* in the Neurosynth database (15,000+ studies). 
 
-We can perform this test using the `Multilevel kernel density (MKDA) analysis- Chi-square` analysis, originally introduced in [Wager et al.,](https://doi.org/10.1093/scan/nsm015). For every voxel, can then test if a greater proportion of studies in our meta-analysis consistently activate a given voxel greater than what we observe in a large set of studies that we did not select for our meta-analysis. 
+We can perform this test using the `Multilevel kernel density (MKDA) analysis - Chi-square` analysis, originally introduced in [Wager et al.,](https://doi.org/10.1093/scan/nsm015). For every voxel, we test if a greater proportion of studies in our meta-analysis activate a given voxel than in a large set of studies that we did not select for our meta-analysis. 
 
-Conceptually, this tests if there's evidence of a *population level* association between the task or psychological construct in our meta-analysis and brain activation (for every voxel).
+Conceptually, this tests if there's evidence of a *population level* association between the task or psychological construct in our meta-analysis and brain activation (for every voxel). It is equivalent to conducting a chi-squared test of independence for a 2-by-2 table of counts for each voxel, where the binary variables are foci occurrence in the meta-analysis of interest and foci occurrence in the reference set of unselected studies.
 
 :::info   
 **What happened to the "forward inference" and "reverse inference" analysis?**
 
 On Neurosynth.org, we renamed the pre-generated forward and reverse inference maps; they're now referred to as the "uniformity test" and "association test" maps, performed by the MKDA Chi-Squared algorithm.
 
-Although the method we used hasn't change,d the latter names more accurately capture what these maps actually mean. It was a mistake on our part to have used the forward and reverse inference labels; those labels should properly be reserved for probabilistic maps generated via a Bayesian estimation analysis, rather than for z-scores resulting from frequentist inferential tests. These maps are more difficult to interpret and use correctly, which is why we don't currently support this approach.
+Although the method we used hasn't changed, the latter names more accurately capture what these maps actually mean. It was a mistake on our part to have used the forward and reverse inference labels; those labels should properly be reserved for probabilistic maps generated via a Bayesian estimation analysis, rather than for z-scores resulting from a frequentist inferential test of association. These maps are more difficult to interpret and use correctly, which is why we don't currently support this approach.
 
 See "Further Reading" below to read more about why this change was made
 :::
