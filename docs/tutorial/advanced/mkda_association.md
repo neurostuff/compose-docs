@@ -13,28 +13,28 @@ import { FaDownload } from 'react-icons/fa'
 
 A key feature that sets aside the Neurosynth platform is large-scale “association" maps (which we previously called "reverse inference" maps).
 
-In a neuroimaging meta-analysis, researchers pool a set of studies that invoke a common psychological construct or task to determine where brain activity is consistently activated. For example, in our [manual meta-analysis](../manual) tutorial, we identified 13 studies where subjects underwent nicotine administration. By combining the results of individual studies, we can see which brain regions that consistently activate for this task.
+In a neuroimaging meta-analysis, researchers pool a set of studies that invoke a common psychological construct or task to determine where brain activity is consistently activated. For example, in our [manual meta-analysis](../manual) tutorial, we identified 13 studies where subjects underwent nicotine administration. By combining the results of individual studies, we can see which brain regions consistently activate for this task.
 
 Although this is a useful approach, there is a significant inferential challenge-- namely, determining how *specific* the relationship between activity in a given region and the cognitive state invoked by the target task. This is difficult, in part because brain regions vary widely in how specifically they activate for different tasks. Some brain regions, such as the insula or lateral prefrontal cortex, play a very broad role in cognition, and hence consistently activate for many different tasks and cognitive constructs. 
 
-Thus, perhaps a more useful question is if and where brain activity occurs *more consistently* for studies investigating a task or construct (in our case, nictoine administration) than studies that *do not* elicit that task or construct. The Neurosynth dataset (or any other large-scale neuroimaging datasets) is a useful reference, as it consists of tens of thousands of diverse neuroimaging studies automatically sample from the literature.
+Thus, perhaps a more useful question is if and where brain activity occurs *more consistently* for studies investigating a task or construct (in our case, nicotine administration) than studies that *do not* elicit that task or construct. The Neurosynth dataset (or any other large-scale neuroimaging datasets) is a useful reference, as it consists of tens of thousands of diverse neuroimaging studies automatically sample from the literature.
 
 ## MKDA Chi-Squared
 
-In our example we want to know if and where studies of nicotine administration show more consistent brain activiation, than *all other studies* in the Neurosynth database (15,000+ studies). 
+In our example we want to know if and where studies of nicotine administration show more consistent brain activation, than *all other studies* in the Neurosynth database (15,000+ studies). 
 
-We can perform this test using the `Multilevel kernel density (MKDA) analysis - Chi-square` analysis, originally introduced in [Wager et al.,](https://doi.org/10.1093/scan/nsm015). For every voxel, we test if a greater proportion of studies in our meta-analysis activate a given voxel than in a large set of studies that we did not select for our meta-analysis. 
+We can perform this test using the `Multilevel kernel density (MKDA) analysis - Chi-square` analysis, originally introduced in [Wager et al.,](https://doi.org/10.1093/scan/nsm015). For every voxel, we test if a greater proportion of studies in our meta-analysis activate a given voxel than in a large set of studies that *we did not select* for our inclusion criteria. 
 
 Conceptually, this tests if there's evidence of a *population level* association between the task or psychological construct in our meta-analysis and brain activation (for every voxel). It is equivalent to conducting a chi-squared test of independence for a 2-by-2 table of counts for each voxel, where the binary variables are foci occurrence in the meta-analysis of interest and foci occurrence in the reference set of unselected studies.
 
 :::info   
 **What happened to the "forward inference" and "reverse inference" analysis?**
 
-On Neurosynth.org, we renamed the pre-generated forward and reverse inference maps; they're now referred to as the "uniformity test" and "association test" maps, performed by the MKDA Chi-Squared algorithm.
+On Neurosynth.org, we renamed the pre-generated forward and reverse inference maps; they're now referred to as the "uniformity test" and "association test" maps that we discuss here.
 
-Although the method we used hasn't changed, the latter names more accurately capture what these maps actually mean. It was a mistake on our part to have used the forward and reverse inference labels; those labels should properly be reserved for probabilistic maps generated via a Bayesian estimation analysis, rather than for z-scores resulting from a frequentist inferential test of association. These maps are more difficult to interpret and use correctly, which is why we don't currently support this approach.
+Although the method we used hasn't changed (MKDA Chi-Squared), the latter names more accurately capture what these maps actually mean. It was a mistake on our part to have used the forward and reverse inference labels; those labels should properly be reserved for posterior probability maps generated via a Bayesian estimation analysis, rather than for z-scores resulting from a frequentist inferential test of association. Probability maps are more difficult to interpret and use correctly, as they depend on the *prior* assumed by the researcher. Since setting an appropriate prior is highly non-trivial, these maps are disabled by default.
 
-See "Further Reading" below to read more about why this change was made
+See "Further Reading" below for more information on this problem.
 :::
 
 ## Specifying MKDA Chi-Squared Meta-Analysis
