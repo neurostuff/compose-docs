@@ -78,7 +78,7 @@ The uniformity test map can be interpreted in roughly the same way as most stand
 
 - **Association test map**: z-scores from a two-way ANOVA testing for the presence of a non-zero association between term use and voxel activation.
 
-The association test maps tell you whether activation in a region occurs more consistently for studies in your meta-analysis m than for other studies in the reference dataset. In other words, a large positive z-score implies that studies in a meta-analysis are more likely to report XXX activation than studies whose abstracts don't include the word 'emotion'. 
+The association test maps tell you whether activation in a region **XXX** occurs more consistently for studies in your meta-analytic sample **m** than for other studies in the reference dataset. In other words, a large positive z-score implies that studies in a meta-analysis are more likely to report **XXX** activation than studies whose abstracts don't include the word 'emotion'. 
 
 Note that association maps *do not* tell you what the probability of a given psychological concept or task is. High Z-scores do not imply that a certain region or voxel is *selective* for a given concept or task. Instead, it just means there is evidence that there is at least a non-zero difference between reference studies, and studies in the meta-analysis.
 
