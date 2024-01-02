@@ -39,7 +39,11 @@ See "Further Reading" below for more information on this problem.
 
 ## Specifying MKDA Chi-Squared Meta-Analysis
 
-Specifying an MKDA Chi-Square meta-analysis in Neurosynth is easy. Simply, select a target set of studies as you would for any other meta-analysis, using either automated or manual selection methods. 
+:::tip
+For this example, we'll use the default parameters for the `MKDAChi2` algorithm. 
+For in depth documentation on the specific parameters of each algorithm, refer to the NiMARE documentation: [`MKDAChi2`](https://nimare.readthedocs.io/en/stable/generated/nimare.meta.cbma.mkda.MKDAChi2.html)
+
+Specifying an MKDA Chi-Square meta-analysis in Neurosynth is easy. Simply, select a target set of Analyses to include from your StudySet as you would for any other meta-analysis. 
 
 In Step 3 ("Create Meta-Analysis Specification") of your Project, select *MKDAChi2* as the *algorithm*. 
 
@@ -54,6 +58,11 @@ Now, select a reference dataset from the dropdown list below. The Neurosynth dat
 
 Now simply complete the rest of the meta-analysis specification wizard to finish. 
 
+:::tip
+When comparing a manually-curated meta-analysis to a reference dataset there are several potential issues to be aware of. First, the reference dataset is composed of automatically extracted coordinates, while a manual curated dataset has corrected coordinate data. Second, unless you include all relevant studies in your target StudySet, some studies relevant to your question of interest may remain in the reference dataset, modestly biasing results
+:::
+
+
 ## Executing your analysis
 
 The *MKDA Chi-Squared* algorithm is more computational expensive than a traditional *MKDA Density* analysis. As a result, it's unlikely to complete with the freely available resources available on Google Colab.
@@ -66,15 +75,11 @@ We recommend at least 32GB of RAM to perform a MKDA Chi-Squared analysis
 
 ## Interpreting results
 
-![Neurosynth Maps](/tutorial/neurosynth_paper_fig2.jpg). 
-
-**Figure 1**. Comparison of Uniformity and Association maps from the original Neurosynth article, on three automatically generated meta-analyses.
-
 The *MKDA Chi-Squared* Workflow outputs two types of maps: **uniformity** and **association** test maps.
 
 - **Uniformity test map:** z-scores from a one-way ANOVA testing whether the proportion of studies that report activation at a given voxel differs from the rate that would be expected if activations were uniformly distributed throughout gray matter.
 
-The uniformity test map can be interpreted in roughly the same way as most standard whole-brain fMRI analysis: it displays the degree to which each voxel is consistently activated in studies that use a given term. For instance, for a meta-analysis of "emotion" high z-scores in the amygdala implies that studies that use the word emotion a lot tend to consistently report activation in the amygdala--at least, more consistently than one would expect if activation were uniformly distributed throughout gray matter. Note that, unlike other coordinate based meta-analysis algorithms (e.g., ALE or MKDA), z-scores aren't generated through permutation, but using a chi-square test
+The uniformity test map can be interpreted in roughly the same way as most standard whole-brain fMRI analysis: it displays the degree to which each voxel is consistently activated in studies that use a given term. For instance, for a meta-analysis of "emotion" high z-scores in the amygdala implies that studies that use the word emotion a lot tend to consistently report activation in the amygdala--at least, more consistently than one would expect if activation were uniformly distributed throughout gray matter. 
 
 - **Association test map**: z-scores from a two-way ANOVA testing for the presence of a non-zero association between term use and voxel activation.
 
