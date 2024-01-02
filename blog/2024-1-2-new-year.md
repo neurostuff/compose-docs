@@ -18,13 +18,13 @@ We’ve also continued to introduce new features and improve the user experience
 
 **Large-scale association tests**
 
-A key feature that set aside Neurosynth were large-scale “association tests” (previously referred to as “reverse inference” test) 
+A key feature that set aside Neurosynth were large-scale “association tests” (previously referred to as “reverse inference” tests).
 
 Whereas a typical meta-analysis tells you about the consistency of activation in a set of studies, an association test tells you whether activation in a region occurs *more consistently for studies in your set of studies versus a large reference sample of studies*. 
 
 Neurosynth leverages large-scale neuroimaging datasets as a reference to which you can compare the specific studies in given meta-analysis. 
 
-That's important, because this effectively allows you to control for base rate differences between regions. Certain regions, such as the insula or lateral PFC for instance, play a very broad role in cognition, and hence tend to be consistently activated for many different terms. Thus, if you see insula activity in your meta-analysis, you can erroneously conclude that the insula is involved in the process of your study. A large-scale association test lets you determine if the activity you observe in a region occurs to a greater extent in your meta-analysis than in other studies, making it possible to make more confident claims that a given region is involved in a particular process, and isn't involved in just about every task.
+That's important, because this effectively allows you to control for base rate differences between regions. Certain regions, such as the insula or lateral PFC for instance, play a very broad role in cognition, and hence tend to be consistently activated for many different terms. Thus, if you see insula activity in your meta-analysis, you might erroneously conclude that the insula is involved in the process of your study. A large-scale association test lets you determine if the activity you observe in a region occurs to a greater extent in your meta-analysis than in other studies, making it possible to make more confident claims that a given region is involved in a particular process, and isn't involved in just about every task.
 
 Previously these association tests were available for the automatically generated maps on neurosynth.org. **Now you can perform large-scale association tests for your custom meta-analyses in Neurosynth Compose.**
 
