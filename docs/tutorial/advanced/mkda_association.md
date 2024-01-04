@@ -20,7 +20,7 @@ Although this is a useful approach, there is a significant inferential challenge
 Thus, perhaps a more useful question is if and where brain activity occurs *more consistently* for studies investigating a task or construct (in our case, nicotine administration) than studies that *do not* elicit that task or construct. The Neurosynth dataset (or any other large-scale neuroimaging datasets) is a useful reference, as it consists of tens of thousands of diverse neuroimaging studies automatically sample from the literature.
 
 ## MKDA Chi-Squared
-
+ 
 In our example we want to know if and where studies of nicotine administration show more consistent brain activation, than *all other studies* in the Neurosynth database (15,000+ studies). 
 
 We can perform this test using the `Multilevel kernel density (MKDA) analysis - Chi-square` analysis, originally introduced in [Wager et al.,](https://doi.org/10.1093/scan/nsm015). For every voxel, we test if a greater proportion of studies in our meta-analysis activate a given voxel than in a large set of studies that *we did not select* for our inclusion criteria. 
