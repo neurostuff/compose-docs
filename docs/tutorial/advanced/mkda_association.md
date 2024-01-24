@@ -117,13 +117,17 @@ However, certain regions which we know to have low specificity, such as the insu
 This example demonstrates how `MKDA Chi-Squared` association analysis can help determine the specificity activity and tasks in a meta-analysis, even for high-quality manual meta-analyses.
 
 
-## Footnotes & Caveats
+## Footnotes & Limitations
 
 **What happened to the "forward inference" and "reverse inference" maps?**
 
 We renamed the pre-generated forward and reverse inference maps; they're now referred to as the "uniformity test" and "association test" maps that we discuss here.
 
 Although the method we used hasn't changed (`MKDA Chi-Squared`), the latter names more accurately capture what these maps actually mean. It was a mistake on our part to have used the forward and reverse inference labels; those labels should properly be reserved for posterior probability maps generated via a Bayesian estimation analysis, rather than for z-scores resulting from a frequentist inferential test of association. Probability maps are more difficult to interpret and use correctly, as they depend on the *prior* assumed by the researcher. Since setting an appropriate prior is highly non-trivial, these maps are disabled by default.
+
+** Using MKDA Chi Squared on manual meta-analyses **
+
+In this tutorial, we applied `MKDA Chi-Squared` to a manual meta-analysis. However, this is not a perfect comparison, as there are differences between the reference sample (Neurosynth), the high-quality manual annotations given as input. Studies in large-scale meta-analytic databases are automatically populated, meaning there are potential sampling biases. Most notably, studies in Neurosynth include all reported coordinates, not only "target" analyses/contrasts. Thus, it is possible that low-level task > no task contrasts are over-represented in this reference sample. 
 
 ## References & Further Reading
 
