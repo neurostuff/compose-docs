@@ -9,7 +9,7 @@ Happy New Year!
 
 2023 was a very exciting year for Neurosynth, having launched our Compose platform to the public and announced it on social media. In the December we’ve saw **over 500 new user visits**, with **200 users signing up for an account**! 🚀
 
-Help us keep this growth going by [sharing our announcement](./announcing-ns-compose) with your colleagues. 🧑‍🔬
+Help us keep this growth going by [sharing our announcement](./blog/announcing-ns-compose) with your colleagues. 🧑‍🔬
 
 # 🌟 What’s New 🌟
 

@@ -87,7 +87,7 @@ See the documentation sections on [Outputs of NIMARE](https://nimare.readthedocs
 
 ## Example: Pintos Lobo (2022) - All Social Processing Tasks
 
-To demonstrate, we used Neurosynth-Compose to replicate the [Pintos Lobo et al., (2022)]([text](https://pubmed.ncbi.nlm.nih.gov/36436737/)) meta-analysis for All Social Processing Tasks. For this example, we have already created a `Project` and `StudySet` with the coordinates used in this meta-analysis.
+To demonstrate, we used Neurosynth-Compose to replicate the [Pintos Lobo et al., (2022)](https://pubmed.ncbi.nlm.nih.gov/36436737/) meta-analysis for All Social Processing Tasks. For this example, we have already created a `Project` and `StudySet` with the coordinates used in this meta-analysis.
 
 We then specified a `MKDAChi2` Meta-Analysis with `FWECorrector` with the `montecarlo` method with 5,000 iterations. 
 
