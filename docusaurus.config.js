@@ -77,8 +77,8 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/neurostuff/compose-docs',
-            label: 'GitHub',
+            href: 'https://compose.neurosynth.org',
+            label: 'Compose Home',
             position: 'right',
           },
         ],

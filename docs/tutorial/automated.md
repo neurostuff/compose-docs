@@ -1,9 +1,10 @@
 ---
 sidebar_label: 'Automated Meta-Analysis'
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Automated Meta-Analysis
+*How to create a fully automated meta-analysis*
 
 :::caution
 This tutorial, and the functionality for automated meta-analysis, is under construction.

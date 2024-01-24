@@ -1,9 +1,10 @@
 ---
 sidebar_label: 'Manual Meta-Analysis'
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Manual Meta-Analysis
+*How to create a custom, manual meta-analysis.*
 
 import { Card, CardContent, Typography, Button } from '@mui/material';
 import { FaDownload } from 'react-icons/fa'
