@@ -11,7 +11,7 @@ import { FaDownload } from 'react-icons/fa'
 
 :::info   
 This is a condensed adaptation of a course taught at OHBM 2023. 
-See the [course materials](https://neurostuff.github.io/meta-analysis-book/ohbm_course_intro.html) for a complete overview.
+See the [course materials](https://neurostuff.github.io/meta-analysis-book/) for a complete overview.
 :::
 
 *Neurosynth Compose* provides a streamlined workflow to facilitate study selection and 
