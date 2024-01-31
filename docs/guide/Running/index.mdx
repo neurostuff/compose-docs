@@ -49,6 +49,12 @@ docker run -it -v -v /local/dir:/results ghcr.io/neurostuff/nsc-runner:latest <m
 
 where `/local/dir` is the path to a local directory where you would like to save the results of your analysis, and `<meta-analysis-id>` is the ID of the meta-analysis you would like to run.
 
+If you are trying to run the analysis from a mac with an ARM chip (eg an M1 Macbook air) use this command instead:
+
+```
+docker run -it --platform=linux/amd64 -v  /local/dir:/results ghcr.io/neurostuff/nsc-runner:latest <meta-analysis-id>
+```
+
 The Docker image will download all required software, run the analysis, and upload the results to Neurovault & Neurosynth Compose.
 An HTML report will be saved in the results directory, and the results will be available in the Meta-Analysis section of your Project on Neurosynth Compose.
 
