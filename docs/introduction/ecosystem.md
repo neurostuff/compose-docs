@@ -20,34 +20,34 @@ large scale meta-analysis to provide new insights into the literature, overcomin
 with sheer scale. With regular updates, Neurosynth was able to keep up with the growth of the literature.
 The database was released with a permissive license, and accompanied by a Python package to manipulate and analyze it. 
 
-Although this approach was surprsingly successful, there were several major limitations to Neurosynth 1.0:
+Although this approach was surprisingly successful, there were several major limitations to Neurosynth 1.0:
 
 * Meta-analyses were limited by **concepts that can be inferred from large scale text mining** (i.e. frequency of terms in the text).
-Although these features proved to be surprsingly useful for well-powered and broad cognitive constructs (e.g. 'emotion'), Neurosynth was not able 
+Although these features proved to be surprisingly useful for well-powered and broad cognitive constructs (e.g. 'emotion'), Neurosynth was not able 
 to capture the fine-grained details of the neuroimaging literature, or allow users to define their own grouping of studies. 
 
 * The database is not curated, and therefore contains many **inaccuracies and incomplete** data at both the study and coordinate level.
-Aside from obvious extraction erors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
+Aside from obvious extraction errors, automated coordinate extraction lacks the ability to determine critical information, such as whether the activation is positive or negative.
 In addition, it's not possible to segregate the coordinates into distinct contrast, conditions, or studies without manual curation.
 
-* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statisical maps in repositories like [NeuroVault][].
+* Coordinate-based analyses are inherently **inferior to image-based** meta-analysis, which is becoming increasingly possible with sharing of unthresholded statistical maps in repositories like [NeuroVault][].
 
 _Neurosynth Compose_ aims to address these limitations:
 
 * Provides a web-based platform for meta-analytic neuroimaging research, allowing users to **curate studies**, and **specify meta-analytic models**. 
 
-* **Flexible and easy to use**, allowing users to perform both large-scale **exploratory** meta-analyses, as well as **targeted, hypothesis-driven** meta-analyses that conform to stringent standards such as the [PRISMA][https://prisma-statement.org] statement.
+* **Flexible and easy to use**, allowing users to perform both large-scale **exploratory** meta-analyses, as well as **targeted, hypothesis-driven** meta-analyses that conform to stringent standards such as the [PRISMA][] statement.
 
 * Allows users to perfom **image-based meta-analysis** using unthresholded images from NeuroVault (in progress).
 
 * Quick, reproducible and transparent **sharing of results**.
 
-* Incentivizes **collaborative curation** of neuroimaging studies in a accesible **centralized repository** (NeuroStore, see below).
+* Incentivizes **collaborative curation** of neuroimaging studies in a accessible **centralized repository** (NeuroStore, see below).
 
 
 ## NeuroStore
 
-NeuroStore is the centralized repository for neuroimaging data amenable to meta-analysis, including coordinates, images, and metadata.
+[NeuroStore][] is the centralized repository for neuroimaging data amenable to meta-analysis, including coordinates, images, and metadata.
 NeuroStore serves as the data backend for Neurosynth Compose, but is also designed to be a standalone interoperable resource for the neuroimaging community.
 
 NeuroStore ingests data from a number of sources, including NeuroVault, NeuroQuery, and Neurosynth (ACE), and provides a unified API for querying the database.
@@ -79,7 +79,7 @@ NIMADS is used as a common, interoperable format by NeuroStore, pyNIMADS, and Ni
 [NeuroQuery][] is a web service, Python library, and coordinate database built for large-scale, predictive meta-analysis.
 Predictive meta-analysis generates non-statistical brain maps from text, using a database of coordinates and associated texts.
 
-The [NeuroQuery dataset][] is accurate and maintainble than the existing Neurosynth 1.0 database,
+The [NeuroQuery dataset][] is accurate and maintainable than the existing Neurosynth 1.0 database,
 this new database will effectively replace the old one within the meta-analytic ecosystem.
 NiMARE can ingest the NeuroQuery database and convert it automatically to a NiMARE Dataset object for analysis.
 Additionally, the NeuroQuery database will feed directly into NeuroStore as a source of coordinates.
@@ -119,6 +119,7 @@ it is planned that NeuroVault will focus exclusively on image storage and sharin
 [Nistats]: https://nistats.github.io/
 [OpenNeuro]: https://openneuro.org
 [peaks2maps]: https://doi.org/10.7490/f1000research.1116395.1
+[PRISMA]: https://prisma-statement.org
 [PyMARE]: https://pymare.readthedocs.io/en/latest/
 [scikit-learn]: https://scikit-learn.org/stable/developers/index.html
 [Sleuth]: http://www.brainmap.org/software.html#Sleuth
