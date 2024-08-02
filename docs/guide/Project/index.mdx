@@ -5,19 +5,172 @@ sidebar_position: 0
 
 # Project
 
+## Overview
+
 A project organizes the the various steps needed to create a meta-analysis from start to finish.
 
 Within a project you will be able to:
- 1. **[Curate](./Project/Curation)** studies of interest and select the ones to be included in the meta-analysis 
- 2. **[Extract](./Project/Extraction)** the relevant data such as activation coordinates and other meta-data
- 3. **[Specify](./Project/Specification)** the algorithm and corrector you would like to use
 
-In each project, you can define a define a single StudySet (i.e. a collection of related studies), and one or more MetaAnalysis specifications.
+1.  **[Curate](./Project/Curation)** studies of interest and select the ones to be included in the meta-analysis
+2.  **[Extract](./Project/Extraction)** the relevant data such as activation coordinates and other meta-data
+3.  **[Specify](./Project/Specification)** the algorithm and corrector you would like to use
 
+In each project, you can define a single studyset (i.e. a collection of related studies defined and used in the extraction phase), and one or more meta-analysis specifications.
 
-You can open a specific project by logging in, navigating to the 
-[My Projects](https://compose.neurosynth.org/projects) page, and selecting a project you've created. 
+## Create a project
 
-When you view a project for the first time, you'll notice that you'll default to the "Edit Project" tab.
-The "View Meta-Analyses" tab will be disabled and will become enabled when you have created the first meta-analysis specification 
-for the project.
+There are two ways to create a project and do your meta-analysis.
+
+### Create a blank project
+
+The first method is to click on the "NEW PROJECT" button in the top navigation menu. This will create a new blank project. You will then be asked to get started on the [curation phase](/compose-docs/guide/Project/Curation) in order to progress.
+
+### Create a project from a sleuth file
+
+The second method of creating a project is to click on the dropdown button on the right of "NEW PROJECT". This will show an option: "Create project from sleuth file". Click on that option and you will be brought to a new page to begin creating a new project from your sleuth file.
+
+Please note that neurosynth-compose requires a specific format in order to proceed with the import. We require that each experiment within the sleuth file _references either a PubMed ID or a DOI_. The exact requirements are specified below:
+
+#### Sleuth file format requirements
+
+##### 1. File Reference.
+
+This reference specifies the coordinate space and must appear at the top of the file. Do not omit the first two forward slashes.<br />
+
+```
+// Reference=MNI
+```
+
+##### 2. Identifier (DOI or PubMed Id)
+
+The next lines of the file represents an experiment. We expect an identifier: _this can either be a DOI, a PubMedId, or both_. Do not omit the first two forward slashes.<br />
+
+```
+// DOI=10.1038/nmeth.1635
+or
+// PubMedId=21706013
+or
+// DOI=10.1038/nmeth.1635
+// PubMedId=21706013
+```
+
+##### 3. Author, year & experiment name
+
+We expect a line containing the authors, year, and experiment name. The authors + year should be separated from the experiment name by a colon. There can be 1 or more lines representing multiple authors + year and experiment name. Do not omit the first two forward slashes.
+
+```
+// Smith et al., 1996: 1 Back vs 0 Back
+or
+// Smith et al., 1996: 1 Back vs 0 Back
+// Graeff et al., 1995: 2 Back vs 1 Back
+// Edwards et al., 2017: 2 Back vs 0 Back
+```
+
+##### 4.Subjects
+
+After the lines representing one or more authors + year and experiment name, add a line for the number of subjects in the experiment.
+
+```
+// Subjects=23
+```
+
+##### 5. Coordinates
+
+Add the X, Y, and Z coordinates. Do not add the two forward slashes. The coordinates should be **delimited by tabs**.
+
+```
+-27 34  72
+-7  -8   -9
+10  -12 -62
+```
+
+Your sleuth file should look something like this:
+
+```
+// Reference=MNI
+// DOI=10.1016/1234567
+// PubMedId=67123237
+// Smith et al., 2019: Working Memory vs Baseline
+// Subjects=23
+-2	8    9
+10  -12 -62
+21  -14 -2
+0   -9  16
+
+// DOI=10.217/1234568
+// PubMedId=23782389
+// Roberts et al., 1995: 2 Back vs 1 Back
+// Graeff et al., 2000: 1 Back vs 0 Back
+// Edwards et al., 2017: 2 Back vs 0 Back
+// Subjects=62
+82	12	0
+-27	34	72
+-7	-8	-9
+10	-12	-62
+```
+
+#### Common Import errors
+
+`Either DOI or PMID is required. (Hint: is it in the right format?) Encountered error at <...>`<br />
+This error indicates that neither a DOI nor PMID was found at the given line. Please check that the DOI or PubMedId given was correctly formulated.
+
+```
+// DOI=10.1038/nmeth.1635
+// PubMedId=21706013
+```
+
+`Unexpected format. (Hint: Did you omit a colon or use a semi colon instead of a colon?) Encountered error at: <...>`<br />
+This error indicates that neurosynth-compose expected to find a valid author + year and experiment name separated by a colon. Instead, it found a string that it did not recognize (or no experiment name was provided at all). Check that the line of the file indicated in the error message contains a correctly formulated author + year and experiment pairing like:
+
+```
+// Roberts et al., 1995: 2 Back vs 1 Back
+```
+
+or multiple
+
+```
+// Roberts et al., 1995: 2 Back vs 1 Back
+// Graeff et al., 2000: 1 Back vs 0 Back
+// Edwards et al., 2017: 2 Back vs 0 Back
+```
+
+`Expected valid DOI but did not find one. Encountered error at: <...>` <br />
+This error indicates that the format of the file did not adhere to the expected requirements due to an invalid DOI. Check that the line of the file indicated in the error message contains a correctly formulated DOI like: `// DOI=10.1038/nmeth.1635`
+
+`At least one experiment name is required. Encountered error at: <...>`<br />
+This error indicates that no experiments were found at the line given by the error message. Please check that the sleuth file has at least one author + year and experiment name, or that the format is correctly formatted like: `// Smith et al., 2019: Working Memory vs Baseline`
+
+`Expected valid PMID but did not find one. Encountered error at: <...>`<br />
+This error indicates that the format of the file did not adhere to the expected requirements due to an invalid PubMedId. Check that the line of the file indicated in the error message contains a correctly formulated PubMedId like: `// PubMedId=21706013`
+
+`Encountered multiple DOIs: <...>`<br />
+This error indicates that multiple DOIs were discovered for the same experiment while parsing the file. Check that the line of the file indicated is part of an experiment that only has one DOI.
+
+`Encountered multiple PubMed IDs: <...>`<br />
+This error indicates that multiple PubMedIds were discovered for the same experiment while parsing the file. Check that the line of the file indicated is part of an experiment that only has one PubMedId.
+
+`Expected number of subjects. Encountered error at: <...>`<br />
+This error indicates that the format of the file did not adhere to the expected requirements due to an invalid Subjects field. Check that the line of the file indicated in the error message contains a correctly formulated Subjects field like: `// Subjects=23`. Make sure that it is not separated by a new line.
+
+`Invalid coordinates: <...>`<br />
+The coordinates given were not in a valid format. Check that the line of the file indicated in the error message contains correctly formulated, tab separated coordinates. They should look like:
+
+```
+82	12	0
+-27	34	72
+-7	-8	-9
+10	-12	-62
+10  -12 -62
+21  -14 -2
+0   -9  16
+```
+
+`Unexpected format. Encountered error at: <...>`<br />
+This error indicates that neurosynth-compose tried to extract the author data from the file but was unable to do so either because the author was not provided or the string was formed in such a way that was not recognized. Check that the line of the file indicated in the error message contains a correctly formulated string like: `// Roberts et al., 1995: 2 Back vs 1 Back`
+
+## Opening a project
+
+You can open a specific project by logging in, navigating to the
+[My Projects](https://compose.neurosynth.org/projects) page, and selecting a project you've created.
+
+When you view a project for the first time, you'll notice that you'll default to the "Edit Project" tab. Another tab, "View Meta-Analyses", will become visible when you have completed both the curation and extraction phases.
