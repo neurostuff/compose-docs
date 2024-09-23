@@ -1,6 +1,6 @@
 ---
 title: Running Analyses
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Running Analyses
@@ -9,7 +9,7 @@ You have a several options for running the analysis. In all cases, you will need
 
 ![Meta-analysis run](/tutorial/ma_run.png)
 
-Under the hood, analyses are managed by the [nsc-runner](https://github.com/neurostuff/nsc-runner) Python package, and executed by the [NiMARE](https://nimare.readthedocs.io/en/stable/) (Neuroimaging Meta-Analysis Research Environment) Python package. 
+Under the hood, analyses are managed by the [nsc-runner](https://github.com/neurostuff/nsc-runner) Python package, and executed by the [NiMARE](https://nimare.readthedocs.io/en/stable/) (Neuroimaging Meta-Analysis Research Environment) Python package.
 
 ## Google Colab
 
@@ -18,13 +18,13 @@ Under the hood, analyses are managed by the [nsc-runner](https://github.com/neur
 The easiest way to run an analysis is to use the [Google Colab](https://colab.research.google.com/) notebook linked above.
 
 The provided notebook runs entirely in the cloud, and does not require any local installation of software.
-To use simply paste your analysis ID into the first cell (`META_ID`), and using the Toolbar selet (Runtime -> Run All) 
+To use simply paste your analysis ID into the first cell (`META_ID`), and using the Toolbar selet (Runtime -> Run All)
 or the keyboard shortcut (Ctrl or ⌘ + F9) to run the notebook.
 
 ![Colab notebook](/guide/nsc_colab_notebook.png)
 
 The notebook will install all required software, run the analysis, and upload the results to Neurosynth Compose.
-Once the analysis is complete, you can use the notebook to explore the results using the interative report, download an archive 
+Once the analysis is complete, you can use the notebook to explore the results using the interative report, download an archive
 of the results, or browse the results in the Neurosynth Compose web interface, in the Meta-Analysis section of your Project.
 
 :::tip
@@ -32,7 +32,7 @@ The Colab notebook has limited and varying freely available resources, and may n
 If your analysis fails, try running it again, or using one of the other methods below.
 :::
 
-## Docker 
+## Docker
 
 The easiest way to run analyses locally is to use the `nsc-runner` [Docker](https://www.docker.com/) image provided by Neurosynth Compose.
 
@@ -72,7 +72,7 @@ where `<version>` is the version of `nsc-runner` that you want to download. If y
 
 You can see the tags available for download on [GitHub](https://github.com/neurostuff/compose-runner/pkgs/container/nsc-runner)
 
-## Manually prepared environment using pip 
+## Manually prepared environment using pip
 
 :::warning
 Manually installing `nsc-runner` may be difficult due to complex dependencies in the SciPy stack, or fMRI-specific tooling. Proceed only if you know what you’re doing.
