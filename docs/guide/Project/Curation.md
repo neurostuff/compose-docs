@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Curation
 
-_Curation_ is the first step in creating a meta-analysis, and begins by _searching_ for and _importing_ studies into the project. Next, you will _review_ studies for inclusion based on their relevancy to your research question. This involves **excluding** irrelevant studies, and **including** relevant ones.
+_Curation_ is the first step in creating a meta-analysis, and begins by _searching_ for and _importing_ studies into the project. You will then _review_ those studies for inclusion based on their relevancy to your research question. This involves **excluding** irrelevant studies, and **including** relevant ones.
 
 At the end of the process, you will be ready to create a [**Studyset**](/compose-docs/guide/glossary#studyset) of related studies that are amenable for neuroimaging meta-analysis
 
