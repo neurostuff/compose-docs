@@ -30,7 +30,8 @@ For more guidance on how to choose a topic for meta-analysis, see the [PRISMA st
 *Projects* contain all the Steps necessary to create a new meta-analysis in Neurosynth Compose.
 We'll step through this process in detail.
 
-To get started, *sign in*, and select **New Project**. 
+To get started, *sign in*, and select **New Project**.
+The default name of a new Project is "Untitled", change this to "Replication of: Neurobiological impact of nicotinic acetylcholine receptor agonists".
 
 You'll now see the Project page, showing the three stages of a meta-analysis: 
 **Search & Curate, Extract & Annotate** and **Specify Meta-Analyses**.
@@ -66,7 +67,7 @@ studies that are relevant to your research question. These steps should be compl
 
 ### Importing studies
 
-But first, we must add studies to our Project.  Click the **Import Studies** button. 
+But first, we must add studies to our Project.  Click the **Import Studies** button on the top right of the screen.
 
 You can search for studies within the *NeuroStore* database—which we maintain and indexes over 20,000 pre-processed neuroimaging studies—or from external sources, such as PubMed or a Citation manager file. 
 
@@ -105,7 +106,8 @@ Reviewing 3,000 studies can take a long time!
 Only a small percentage of these studies will meet all inclusion criteria. For the sake of the tutorial, we provide a shortened list of <FaDownload size={20} /> [PUBMED IDS](/tutorial/tutorial_pmids.txt).
 :::
 
-We can import this file into our Project by clicking **Upload File**. Give this import a name for future reference.
+We can import this file into our Project by clicking **Upload File** or by
+copy/pasting the IDs into the box. Give this import a name for future reference.
 All studies imported from this search will be **Tagged** with the search name. 
 
 ![Import name](/tutorial/import_name.png)
