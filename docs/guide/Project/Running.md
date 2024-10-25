@@ -89,3 +89,12 @@ and then run the analysis using the following command:
 ```
 nsc-runner <meta-analysis-id>
 ```
+
+---
+
+# Viewing and intepreting your results
+
+After sucesfully running your meta-analysis, results will be uploaded back to Neurosynth Compose and NeuroVault, where you can interactively view and intepret your results.
+See the next section in the documentation for more detais.
+
+---
