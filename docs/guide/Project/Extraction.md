@@ -5,45 +5,38 @@ sidebar_position: 1
 
 # Extraction
 
-Extraction is the second step in creating a meta-analysis. It involves taking the
-new [**Studyset**](/compose-docs/guide/glossary#studyset) creates in the curation step and extracting relevant information from studies, such as [**annotations**](/compose-docs/guide/glossary#annotation),
-and peak activation coordinates, or [**points**](/compose-docs/guide/glossary#point).
+Extraction is the second step in creating a meta-analysis. It involves using the
+[**Studyset**](/compose-docs/guide/glossary#studyset) created during the curation step to extract relevant information from studies, such as [**annotations**](/compose-docs/guide/glossary#annotation), and peak activation coordinates, or [**points**](/compose-docs/guide/glossary#point).
 
 ## Getting Started
 
-After the curation phase is complete, the user is redirected to the extraction phase. You can also access the Extraction phase through the main project page.
+Once curation is complete, the user is redirected to the extraction phase.
 
-Here, the extraction phase starts when
-a wizard that pops up and guides the user through the process of initializing the extraction phase. On top of creating the
-initial [**annotation columns**](./Extraction#annotations), this wizard also guides the user through the
-process of [**ingestion** ](./Extraction#ingestion) of the curated studies to create a new [**studyset**](../glossary#studyset).
+This phase begins with a wizard that guides the user through initializing the extraction process. In addition to creating initial [**annotation columns**](./Extraction#annotations), the wizard assists the user with the [**ingestion** ](./Extraction#ingestion) of curated studies to generate a new [**studyset**](../glossary#studyset).
 
 ## Ingestion
 
-Ingestion describes the process of taking the studies from the curation phase and inserting them into the database one by one.
+Ingestion is the process of importing studies from the curation phase into the database.
 
-For each study, neurosynth-compose searches the neurostore database and checks to see if a matching study exists. If a match
-does not exist, then a new study is created and the user must go to the paper to fill out the relevant details.
-If one or more matches are found, neurosynth-compose will choose the most recently updated one by default. The user can later go in and switch to a different version if the one selected is not the ony they wanted.
+For each study, Neurosynth-Compose searches the Neurostore database for matches. If a study is not already in the database, a new entry is created, requiring the user to extract relevant information from the corresponding paper (e.g., activation coordinates). 
 
-:::info Why ingestion?
-During the curation phase, studies are actually not inserted into the database. A vast majority of the studies that
-are imported into the curation phase are excluded during the curation process. Inserting these studies into the database would clutter
-it and create a lot of empty entries which don't have coordinates and might not even be used. By waiting until we have our finalized
-included subset of studies, we reduce the number of empty, useless studies in the database.
+If multiple matches are found, the most recently updated one is selected, though the user can switch to a different version if desired. Existing versions may have been automatically extracted by the database or contributed by other users.
+
+:::info Why Ingestion? 
+During curation, studies are not yet inserted into the database. Many studies imported during curation are excluded from the final set. Inserting all studies at this stage would clutter the database with entries that lack coordinates or may never be used. By waiting until the final subset is selected, we reduce the number of empty or irrelevant entries in the database. 
 :::
 
 ## Extraction Table
 
 ![Extraction Table](/guide/extraction_table.png)
 
-Once ingestion is complete, the user is shown a table listing the studies within the studyset. The extraction step involves iteratively reviewing each study to make sure they contain information amenable to a meta-analysis.
-Studies in the extraction phase are filtered and categorized to help better organize and facilitate the process. Initially, all studies
-start as **Unreviewed**. The user can then decide to mark them as **Save For Later** if they want to revisit the study, or **Completed**.
+Once ingestion is complete, the user is shown a table listing the studies within the studyset. The extraction step involves iteratively reviewing each study to make sure they contain information suitable for meta-analysis.
+Studies in the extraction phase are filtered and categorized to better organize and streamine the process. Initially, all studies
+are marked as **Unreviewed**, and the user can decide to mark them as **Save For Later** if they want to revisit the study, or **Completed** when they are finished.
 
-If the study does not have any already extracted coordinates, then the user should go and find the original paper and manually search for the coordinates to add to the study.
+If a study does not have any extracted coordinates, the user must manually locate the original paper and find the coordinates to add to the study.
 
-If the study has automatically extracted coordinates, then the user only has to validate that these coordinates are satisfactory.
+If the study has automatically extracted coordinates, the user needs only to verify that these coordinates are satisfactory.
 
 The table provides functionality for filtering amongst various columns as well as sorting. To start editing a study, click on one of the table rows.
 
@@ -56,34 +49,28 @@ The table provides functionality for filtering amongst various columns as well a
 In the extraction page, click the "Annotations" button on the top right. Annotations are represented with a spreadsheet like interface, where the row headers are the respective studies and their analyses, and the column headers are the properties for
 each of those study analyses. Each cell in the spreadsheet repreesnts the value for a given property of a study's analysis.
 
-By default, all annotations will start with a column **included** which will be set to true. This column can be modified if needed.
+By default, all annotations will include a column labeled included, which is initially set to true. This column can be modified if needed.
 
 ## Study Editing
 
 ![Study Editing](/guide/study_edit.png)
 
-Clicking on a study in the extraction table will lead you to the study editing page. This page allows you to edit study coordinates, add new analyses to the study, as well as modify the study name, authors, PMID, DOI, etc.
-If you would like to update the annotation values just for the given study, you can do so utilizing the study annotations table.
+Clicking on a study in the extraction table leads to the study editing page. Here, users can edit study coordinates, add new analyses to the study, and modify details such as the study's name, authors, PMID, DOI, etc. If you wish to update annotation values for a specific study, you can do so using the study's annotations table.
 
 ## Syncing Between Curation and Extraction
 
 ![Out of Sync](/guide/out_of_sync.png)
 
-In an ideal meta-analysis process, once the curation phase is completed then it is not touched again. However, this is not always possible in the real world.
+Ideally, once the curation phase is complete, no further changes are made. However, in practice, this is not always possible.
 
-If the curation phase is modified (for example if a study previously marked as "included" was excluded, or an additional study that was previously excluded was changed to "included") then the extraction phase
-no longer represents the output of the curation phase. In a situation like this, we need to resynchronize these two so that the extraction phase is aligned again. When neurosynth-compose encounters a mismatch
-between the two phases, a banner will pop up prompting the user to synchronize the extraction phase with the new curation phase updates.
-
-Successfully resynchronizing the two phases will cause the banner to go away.
+If changes are made during the curation phase (for example, if a previously included study is excluded or an excluded study is included), the extraction phase will no longer align with the output of the curation phase. In such cases, the extraction phase needs to be resynchronized with the updates from the curation phase. When Neurosynth-Compose detects a mismatch between the two phases, a banner will appear prompting the user to resynchronize the extraction phase with the updated curation phase.
 
 ## Completion
 
-The extraction phase is considered complete and the user is prompted to move on when all studies have been marked as complete. Once this step is complete, it is then time to specify the configurations for your meta-analysis.
-When all studies are marked as completed, a button should appear prompting the user to continue the meta-analysis process.
+The extraction phase is considered complete once all studies have been marked as Completed. At this point, the user is prompted to proceed to the meta-analysis configuration step. Once all studies are marked as complete, a button will appear, allowing the user to continue with the meta-analysis process.
 
 :::info
-If you would like to skip the extraction step, then you can go back to the project page and click the button: "Mark all as complete" underneath the extraction section.
+If you would like to skip the extraction step, you can return to the project page and click the "Mark all as complete" button under the extraction section.
 
 ![Mark all as complete](/guide/mark_all_as_complete.png)
 :::
