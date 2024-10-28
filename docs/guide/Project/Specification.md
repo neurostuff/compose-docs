@@ -30,7 +30,7 @@ Next, select a method for [multiple comparisons correction](https://nimare.readt
 
 
    - **FDRCorrector** (default): False Discovery Rate correction. 
-   - **FWECorrector**: Family-Wise Error Rate correction. We strongly recommend using FWECorrector for publication-quality results with 10,000 iteration if possible. This is computationl intesive, however, hence not the default option. 
+   - **FWECorrector**: Family-Wise Error Rate correction. We strongly recommend using FWECorrector for publication-quality results with 10,000s iteration if possible. This is computationally intensive however, hence not the default option. 
 
 ![Wizard 1](/guide/specification_wizard1.png)
 
