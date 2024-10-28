@@ -36,8 +36,7 @@ Next, select a method for [multiple comparisons correction](https://nimare.readt
 
 
 ### 2) **Select Analyses**  
-   Now you will select which studies & analyses you want to include in your meta-analysis. To do so, select the annotation column for inclusion, which determines which analyses are used in the meta-analysis. B
-   y default, the "included" column contains all studies and analyses, but you can modify this based on your needs by editing `Annotations` in the Extraction step.
+   Now you will select which studies & analyses you want to include in your meta-analysis. To do so, select the annotation column for inclusion, which determines which analyses are used in the meta-analysis. By default, the "included" column contains all studies and analyses, but you can modify this based on your needs by editing `Annotations` in the Extraction step.
 
    A preview of the included studies based on the selected annotation column will be displayed.
 
