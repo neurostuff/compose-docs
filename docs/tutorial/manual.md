@@ -233,7 +233,7 @@ Let's start by editing a Study's Analyses.
 ![Extraction study view](/tutorial/add_coordinates.png)
 
 :::info
-*Analyses* are groups of images or coordinates reported in a given study fir a specific analysis. This is often referred to as "Contrasts", but we use the more general term "Analyses" to accommodate a wider range of fMRI models. 
+*Analyses* are groups of images or coordinates reported in a given study for a specific analysis. This is often referred to as "Contrasts", but we use the more general term "Analyses" to accommodate a wider range of fMRI models. 
 :::
 
 For new studies, we will not have any data, and it is necessary to manually enter these data from the text of a study. 
