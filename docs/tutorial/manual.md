@@ -73,7 +73,7 @@ You can search for studies within the *NeuroStore* database—which we maintain 
 
 ![Import Studies](/tutorial/import_studies_options.png). 
 
-*Import via NeuroStore* is simpler and faster, as these studies already exist on in our system 
+*Import via NeuroStore* is simpler and faster, as these studies already exist in our system 
 and have pre-extracted imaging data (e.g. coordinates). 
 As a result, there will be fewer irrelevant studies to exclude, and less data extraction to complete.
 
