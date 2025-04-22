@@ -36,8 +36,6 @@ An automated meta-analysis in *Neurosynth Compose* looks a lot like a manual one
 
 One of the main differences between a *manual* and *automated* meta-analysis, is the steps required to select studies. As such, we reccomeend selecting the "Simple" curation workflow, which only consists of a single data curation step (which is optional). 
 
-![Simple Workflow](/tutorial/automated_workflow.png). 
-
 :::tip
 Decide ahead of time if you want to perform a Coordinate or an Image based meta-analysis. Image-based Meta-Analysis (IBMA) is more precise and powerful, but there are much fewer studies available. 
 :::
