@@ -160,6 +160,126 @@ If a study meets inclusion critera (for the current phase), click **PROMOTE** to
 For the first column (especially in a PRISMA workflow) it can be tedious to promote non-duplicates to the next column. If all duplicates have been resolved, you can exit the dialog and click **PROMOTE ALL UNCATEGORIZED STUDIES** to advance all non-duplicate studies to the next column.
 :::
 
+## AI Extracted Features
+
+Using artificial intelligence, various task and participant metadata have been extracted from the paper's full text. To view these extracted features, click on the "+ - Columns" button and check the checkbox for any options under a group header with an AI Icon.
+
+### Task Details
+
+#### count
+
+Number of participants in this group
+
+#### diagnosis
+
+Diagnosis of the group, if any
+
+#### group_name
+
+Group name, healthy or patients
+
+#### subgroup_name
+
+Subgroup name
+
+#### male_count
+
+Number of male participants in this group
+
+#### female_count
+
+Number of female participants in this group
+
+#### age_mean
+
+Mean age of participants in this group
+
+#### age_range
+
+Age range of participants in this group, separated by a dash
+
+#### age_minimum
+
+Minimum age of participants in this group
+
+#### age_maximum
+
+Maximum age of participants in this group
+
+#### age_median
+
+Median age of participants in this group
+
+#### imaging_sample
+
+Whether this subgroup underwent fMRI, MRI or neuroimaging (yes or no)
+
+### Participant Demographics
+
+#### TaskName
+
+Name of the task, e.g., 'Stroop Task' or 'Go/No-Go Task'. The name is as it appears in the paper or a descriptive name is given if unspecified.
+
+#### TaskDescription
+
+The key features of the task, such as its purpose or what it measures.
+
+#### DesignDetails
+
+Detailed description of the task design. Includes information on the number of conditions, the number of trials per condition, the length of trials, and the length of inter-trial intervals.
+
+#### Conditions
+
+Conditions of task performed by the subjects.
+
+#### TaskMetrics
+
+Key metrics or outcomes measured during the task, e.g., 'response time', 'accuracy', 'fMRI BOLD signal'.
+
+#### Concepts
+
+List of mental concepts associated with the task, such as cognitive processes or representations it engages. Examples include 'working memory', 'response inhibition', 'visual perception'.
+
+#### Domain
+
+Cognitive domain(s) the concept(s) belong to
+
+#### RestingState
+
+Whether or not this task was a resting state task
+
+#### RestingStateMetadata
+
+Additional details about the resting-state task, such as duration and instructions provided to participants, if applicable.
+
+#### TaskDesign
+
+Design(s) of the task
+
+#### TaskDuration
+
+Total duration of the task, e.g., '10 minutes' or '600 seconds'.
+
+#### Modality
+
+Modality of the neuroimaging data
+
+#### StudyObjective
+
+A brief summary of the primary research question or objective of the study.
+
+#### Exclude
+
+Whether the study was primarily either a meta-analysis or a review. (Only studies that conduct primary data collection are to be included, exclude = true would indicate that the study in question was either a meta-analysis or a review)
+
+#### fMRITasks
+
+List of fMRI tasks performed by the subjects inside the scanner and their metadata. If the study did not include fMRI tasks, this field will be empty.
+
+#### BehavioralTasks
+
+List of behavioral tasks performed by the subjects outside the scanner and their metadata. If the study did not include behavioral tasks, this field will be empty.
+
 ## Downloading included studies
 
 In order to download the studies that you have included in Curation, you can utilize our download feature. Go to curation and click "Download Included as CSV". Alternatively, you can click the dropdown and download the included studies in BibTeX format instead.
