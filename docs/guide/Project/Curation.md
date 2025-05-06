@@ -216,50 +216,6 @@ Whether this subgroup underwent fMRI, MRI or neuroimaging (yes or no)
 
 ### Participant Demographics
 
-#### TaskName
-
-Name of the task, e.g., 'Stroop Task' or 'Go/No-Go Task'. The name is as it appears in the paper or a descriptive name is given if unspecified.
-
-#### TaskDescription
-
-The key features of the task, such as its purpose or what it measures.
-
-#### DesignDetails
-
-Detailed description of the task design. Includes information on the number of conditions, the number of trials per condition, the length of trials, and the length of inter-trial intervals.
-
-#### Conditions
-
-Conditions of task performed by the subjects.
-
-#### TaskMetrics
-
-Key metrics or outcomes measured during the task, e.g., 'response time', 'accuracy', 'fMRI BOLD signal'.
-
-#### Concepts
-
-List of mental concepts associated with the task, such as cognitive processes or representations it engages. Examples include 'working memory', 'response inhibition', 'visual perception'.
-
-#### Domain
-
-Cognitive domain(s) the concept(s) belong to
-
-#### RestingState
-
-Whether or not this task was a resting state task
-
-#### RestingStateMetadata
-
-Additional details about the resting-state task, such as duration and instructions provided to participants, if applicable.
-
-#### TaskDesign
-
-Design(s) of the task
-
-#### TaskDuration
-
-Total duration of the task, e.g., '10 minutes' or '600 seconds'.
-
 #### Modality
 
 Modality of the neuroimaging data
@@ -276,9 +232,21 @@ Whether the study was primarily either a meta-analysis or a review. (Only studie
 
 List of fMRI tasks performed by the subjects inside the scanner and their metadata. If the study did not include fMRI tasks, this field will be empty.
 
-#### BehavioralTasks
+##### fMRITasks.RestingState
 
-List of behavioral tasks performed by the subjects outside the scanner and their metadata. If the study did not include behavioral tasks, this field will be empty.
+Whether this task wa a resting state task or not
+
+##### fMRITasks.RestingStateMetadata
+
+Additional details about the resting-state task, such as duration and instructions provided to participants, if applicable
+
+##### fMRITasks.TaskDesign
+
+Design(s) of the task
+
+##### fMRITasks.TaskDuration
+
+Total duration of the task, e.g., '10 minutes' or '600 seconds'.
 
 ## Downloading included studies
 
