@@ -232,6 +232,34 @@ Whether the study was primarily either a meta-analysis or a review. (Only studie
 
 List of fMRI tasks performed by the subjects inside the scanner and their metadata. If the study did not include fMRI tasks, this field will be empty.
 
+##### fMRITasks.TaskName
+
+Name of the task, e.g., 'Stroop Task' or 'Go/No-Go Task'.
+
+##### fMRITasks.Domain
+
+The domain of the task, e.g., "Perception", "Attention", "Emotion" etc.
+
+##### fMRITasks.Concepts
+
+List of mental concepts associated with the task, such as cognitive processes or representations it engages. Examples include "working memory", "response", "inhibition", 'visual perception". The underlying mental constructs measured or manipulated by the task.
+
+##### fMRITasks.Conditions
+
+Conditions of task performed by the subjects.
+
+##### fMRITasks.TaskMetrics
+
+Key metrics or outcomes measured during the task, e.g., "response time", "accuracy", and "fMRI BOLD signal".
+
+##### fMRITasks.TaskDescription
+
+Description of the key features of the task, such as its purpose or what it measures.
+
+##### fMRITasks.DesignDetails
+
+A detailed description of the task design including information on the number of conditions, the number of trials per condition, the length of trials, and the length of inter-trial intervals.
+
 ##### fMRITasks.RestingState
 
 Whether this task wa a resting state task or not
