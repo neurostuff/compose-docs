@@ -74,7 +74,7 @@ Participant demographics were extracted for each experimental group in the study
 **Preliminary Validation.** 
 - We annotated over 220 articles for participant demographics. 
 - We observed a high level of accuracy for most fields, notably for participant *count* (\<0.15 Mean Percentage Error). 
-- In our annotated sample, we identified 100 individual  participant groups with a *diagnosis* labels (e.g. “schizophrenia”). Using BERTScore to quantitatively compare the extracted and annotated diagnoses, the best performing models achieved \>0.8 F1-score, indicating moderate to high accuracy. (higher scores are better). 
+- In our annotated sample, we identified 100 individual  participant groups with a *diagnosis* labels (e.g. “schizophrenia”). Using BERTScore to quantitatively compare the extracted and annotated diagnoses, the best performing models achieved >0.8 F1-score, indicating moderate to high accuracy. (higher scores are better). 
 - Qualitative analysis confirmed that LLMs are increasingly adept at capturing specific diagnostic information (e.g., "Autism Spectrum Disorder", "phobic prone", "eating disorders prone") and associating it correctly with relevant demographic data, even if the specific form differed from the manual annotation. 
 
 ### **Experimental Details**
