@@ -16,7 +16,7 @@ Here, we aimed to leverage innovations in Zero-Shot Learning using Large Languag
 
 At the heart of this effort is the recent ability for LLMs to understand language with little specialized training. Historically, developing AI models for scientific information extraction was difficult due to the large number of annotated examples required for training. For low-annotation fields like neuroimaging, that largely meant that state-of-the-art biomedical NLP models were out of reach.
 
-However, recent advancements in **LLM transfer learning** have made it possible to automatically extract information from articles, even in areas where there are very few existing human-labeled examples. Newer LLMs that are trained on vast amounts of general text can be prompted to learn new information with no training data. This approach called "**zero-shot learning**" means SOTA LLMs can extract information even if they haven't seen that exact type of task before.
+However, recent advancements in **LLM transfer learning** have made it possible to automatically extract information from articles, even in areas where there are very few existing human-labeled examples. Newer LLMs that are trained on vast amounts of general text can be prompted to learn new information with no training data. This approach, called "**zero-shot learning**", means SOTA LLMs can extract information even if they haven't seen that exact type of task before.
 
 Here, we use these models to **extract specific details directly from the full text of over 30,000 neuroimaging studies indexed in the NeuroStore database**. By carefully guiding the AI to focus on verifiable facts within the paper, we can reduce the chance of hallucinations, and allow us to verify how accurately key details are extracted. Using this information, we can build a large, structured collection of neuroscientific facts—including participant demographics, study designs, task information, and more—which is then seamlessly presented to you during the curation stage.
 
@@ -37,7 +37,7 @@ Figure 3\. Detailed study-evel AI-extracted information, showing Participant Dem
 
 ## **Iterative Approach to Validation and Development**
 
-Our approach to information extraction is specifically focused on study details relevant for neuroimaging meta-analysis. We have developed specific extraction schemas that capture the nuanced details crucial for meta-analysis in this field. For each set of guidelines, a sample of studies is manually reviewed and tagged, and the automated extractions are checked for accuracy against these manual tags, both by numbers and by human review. This thorough process makes sure that when new extraction features are introduced to the platform, a reasonable level of accuracy can be established. In contrast with domain-general automated literature review platform and deep review platforms (e.g Elict, Perplexity, Google Notebook LM), the specific extraction schemas have been validation and aligned with expert-guided knowledge representations. 
+Our approach to information extraction is specifically focused on study details relevant for neuroimaging meta-analysis. We have developed specific extraction schemas that capture the nuanced details crucial for meta-analysis in this field. For each set of guidelines, a sample of studies is manually reviewed and tagged, and the automated extractions are checked for accuracy against these manual tags, both by numbers and by human review. This thorough process makes sure that when new extraction features are introduced to the platform, a reasonable level of accuracy can be established. In contrast with domain-general automated literature review platform and deep review platforms (e.g Elict, Perplexity, Google Notebook LM), the specific extraction schemas have been validated and aligned with expert-guided knowledge representations. 
 
 ![Figure 4](img/iterative_workflow.png)
 
@@ -51,7 +51,7 @@ The extraction pipelines that are validated and iteratively developed using thes
 
 ## **Initial Extraction Schemas**
 
-At launch, we have extracted two schemas across the articles indexed by NeuroStore: *participant demographics* and *experimental details.* To begin, these schemas were extracted from the full text of articles using GPT-4— a model we previously established performed well at information extraction. 
+At launch, we have extracted two schemas across the articles indexed by NeuroStore: *participant demographics* and *experimental details.* To begin, these schemas were extracted from the full text of articles using GPT-4— a model whos performance has already been established in previous internal validations. 
 
 ### **Participant Demographics**
 
@@ -74,7 +74,7 @@ Participant demographics were extracted for each experimental group in the study
 **Preliminary Validation.** 
 - We annotated over 220 articles for participant demographics. 
 - We observed a high level of accuracy for most fields, notably for participant *count* (\<0.15 Mean Percentage Error). 
-- In our annotated sample, we identified 100 individual  participant groups with a *diagnosis* labels (e.g. “schizophrenia”). Using BERTScore to quantitatively compare the extracted and annotated diagnoses, the best performing models achieved >0.8 F1-score, indicating moderate to high accuracy. (higher scores are better). 
+- In our annotated sample, we identified 100 individual  participant groups with *diagnosis* labels (e.g. “schizophrenia”). Using BERTScore to quantitatively compare the extracted and annotated diagnoses, the best performing models achieved >0.8 F1-score, indicating moderate to high accuracy. (higher scores are better). 
 - Qualitative analysis confirmed that LLMs are increasingly adept at capturing specific diagnostic information (e.g., "Autism Spectrum Disorder", "phobic prone", "eating disorders prone") and associating it correctly with relevant demographic data, even if the specific form differed from the manual annotation. 
 
 ### **Experimental Details**
@@ -109,7 +109,7 @@ For each fMRI task presented within the study, the following was extracted:
 We annotated 104 papers to validate study/task information, with the majority of these papers sourced from the NeuroVault collection. 
 
 * **Modality & RestingState:** Modality and Resting State fields demonstrated very high accuracy. For instance, with 94% accuracy for these fields using GPT 4\.  
-* **TaskName and TaskDescription Accuracy:** TaskName is accurate for studies with a clearly defined task name (64/104 of studies), with a score of 0.9 (1-Levenshtein distance). For studies without a clearly defined task name, qualitative review of examples, showed that the models often provided a coherent and plausible description of the task based on the provided context, even if it wasn't a direct match to a predefined label.
+* **TaskName and TaskDescription Accuracy:** TaskName is accurate for studies with a clearly defined task name (64/104 of studies), with a score of 0.9 (1-Levenshtein distance). For studies without a clearly defined task name, qualitative review of examples showed that the models often provided a coherent and plausible description of the task based on the provided context, even if it wasn't a direct match to a predefined label.
 
 This preliminary validation is just a first step. Stay tuned for a more comprehensive evaluation of AI-extracted neuroimaging features\!
 
