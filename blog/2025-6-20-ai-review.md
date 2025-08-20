@@ -10,7 +10,7 @@ We’re excited to share the release of a significant new innovation in Neurosyn
 
 Traditionally, reviewing studies for inclusion in a meta-analysis takes hundreds of hours, even with a user-friendly interface. The original Neurosynth platform helped by using text mining to group studies by keywords, but extracting crucial details—like participant demographics or task design—remained a challenge because such information is inconsistently reported.
 
-With Large Language Models (LLMs) and zero-shot learning, we can now automatically extract structured study information directly from full-text articles. This makes **precise, automated meta-analysis of neuroimaging literature a reality.**
+With Large Language Models (LLMs) and zero-shot learning, we can now automatically extract structured study information directly from full-text articles. This makes **precise, automated neuroimaging meta-analysis** a reality.
 
 ## **LLMs for Neuroscientific Information Extraction**
 
