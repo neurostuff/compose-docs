@@ -14,9 +14,9 @@ With Large Language Models (LLMs) and zero-shot learning, we can now automatical
 
 ## **LLMs for Neuroscientific Information Extraction**
 
-Historically, developing AI models for information extraction required a large number of annotated examples required for training, making it impossible to apply in low-data fields like neuroimaging. However, modern LLMs can interpret scientific text without extensive domain-specific training. It is now possible to  automatically extract information from articles, even in areas where there are very few existing human-labeled examples. This approach, called "**zero-shot learning**", means modern LLMs can extract information without task-specific training.
+Traditionally, building AI models for information extraction required large annotated datasets, which limited their use in fields like neuroimaging with little labeled data. Modern LLMs change this by interpreting scientific text without domain-specific training. Using zero-shot learning, they can now extract information from articles even without task-specific examples.
 
-By prompting LLMs carefully, we can extract verifiable details—like sample size, diagnosis, age range, tasks, and modalities—from more than 30,000 studies in the NeuroStore database. These details are displayed during curation, making it easier to compare studies and decide which to include.
+By prompting LLMs carefully, we can extract verifiable details—like sample size, diagnosis, age range, tasks, and modalities—from more than **30,000 studies in the NeuroStore database**. These details are displayed during curation, making it easier to compare studies and decide which to include.
 
 ![Figure 1](img/ai_extraction_workflow.png)
 Figure 1\. High-level overview of Zero Shot Information Extraction using LLM prompting
