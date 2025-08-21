@@ -27,7 +27,7 @@ This information is presented in two key places within the revamped curation use
 
 This supports a faster, PRISMA-compliant screening and eligibility process, all within a web-based interface.
 
-![Figure 2](img/ai_table_view.png)
+![Figure 2](img/promote_exclude_ai.gif)
 Figure 2\. Table view showing AI-extracted information (Task Name, Group names, Diagnosis), across three studies
 
 By clicking on a row in the table view, you can see detailed study-level extracted information:
