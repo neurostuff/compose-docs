@@ -22,6 +22,8 @@ The curation step is complete when all studies have been categorized, either by 
 
 When you first begin _Curation_, you will choose between different workflows, which vary in how rigorous or systematic the selection of studies will be.
 
+![prismavssimple](/guide/prismavssimple.gif)
+
 :::tip How specific to be?
 
 Performing a systematic meta-analysis involves a substantial amount of effort. It is up to you, the researcher, how rigorous to be in this process. We reccomend thinking about your _goals_ prior to starting this process so that you can have clear inclusion guidelines. If you are looking for an exploratory analysis, we reccomend following the tutorial for _automated meta-analysis_, which replaces manual curation with an automated selection of studies. Note that automated meta-analyses are not a replacement for a careful systematic meta-analysis.
@@ -77,6 +79,8 @@ and want to know where a certain study was imported from.
 
 ### Import Method 1: Import from Neurostore
 
+![import_neurostore](/guide/import_neurostore.gif)
+
 Neurostore indexes a large number of neuroimaging studies which are ready for meta-analysis. Studies in Neurostore have been pre-processed, including extracting peak activation coordinates from Tables in the text, and computing semantic features from the abstract/full text. Neurostore also indexes studies which other users have annotated and made available to others for re-use.
 
 Importing from Neurostore utilizes the Study search UI similar to the [Study Page](https://compose.neurosynth.org/studies).
@@ -87,6 +91,8 @@ Importing from Neurostore can save you a lot of time, as these studies are much 
 :::
 
 ### Import Method 2: Import from PubMed
+
+![import_pmid](/guide/import_pmid.gif)
 
 Use this option to import studies directly from PubMed. To start, you need to go to the [PubMed Site](https://pubmed.ncbi.nlm.nih.gov/)
 and either enter in a search or navigate to a previously created collection.
@@ -102,9 +108,13 @@ If your collection has more than 1,500 PMIDs, split the import into multiple fil
 
 ### Import Method 3: Import from BibTex/RIS/endnote
 
+![import_standardformat](/guide/import_standardformat.gif)
+
 Use this option to import studies via a .bib, .RIS, or .enw file. This may be useful if you want to import from a citation manager like Zotero.
 
 ### Import Method 4: Custom Studies
+
+![import_manual](/guide/import_manual.gif)
 
 If there is any record that cannot be easily imported using one of the methods listed above, you can also manually create a study. This may be necessary
 to include resources like unpublished studies.
@@ -114,6 +124,8 @@ to include resources like unpublished studies.
 At the moment, it's not possible to add studies from a sleuth file into an _existing project_. To create a new project from a sleuth file, [read more here](/compose-docs/guide/glossary#studyset).
 
 ### Duplicates
+
+![dupliates](/guide/duplicates.gif)
 
 If duplicates are detected in your import, you will be asked how to reconcile them by choosing which of the studies to keep by choosing "KEEP THIS STUDY". Matching duplicates will be automatically marked for exclusion. Note that as a user, you can override any of these selections at any time, and choose which studies to keep or exclude.
 
@@ -135,6 +147,8 @@ Note that if you mark a study that is already promoted as a duplicate, it will b
 Although rare, it is possible to have duplicates within a given import. For example, if within a RIS file there are duplicate entries. In this case, you will be asked to select which study to keep. Studies marked as duplicates will still be imported but marked as excluded.
 
 ## Excluding and Promoting Studies
+
+![promote_exclude](/guide/promote_exclude.gif)
 
 Once studies have been imported into the first column of the curation phase, they need to be reviewed for inclusion into your meta-analysis.
 All studies must be either excluded or moved to the inclusion column in order to progress to the extraction phase.
@@ -161,6 +175,8 @@ For the first column (especially in a PRISMA workflow) it can be tedious to prom
 :::
 
 ## AI Extracted Features
+
+![promote_exclude_ai](/guide/promote_exclude_ai.gif)
 
 Using artificial intelligence, various task and participant metadata have been extracted from the paper's full text. To view these extracted features, click on the "+ - Columns" button and check the checkbox for any options under a group header with an AI Icon.
 
