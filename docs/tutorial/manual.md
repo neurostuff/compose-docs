@@ -43,7 +43,7 @@ You'll now see the Project page, showing the three stages of a meta-analysis:
 The first step in a meta-analysis is to *Search* for studies, and *Curate* these studies into a 
 final *StudySet* that contains the studies we want to include in a Meta-Analysis.
 
-To get started, we must choose a Curation workflow. There are three options: Simple, PRISMA and Custom. The main difference between these options is the number of review steps involved in creating a final list of studies. **For a rigorous Manual Meta-Analysis, select "PRISMA".**
+To get started, we must choose a Curation workflow. There are two options: Simple and PRISMA. The main difference between these options is the number of review steps involved in creating a final list of studies. **For a rigorous Manual Meta-Analysis, select "PRISMA".**
 
 :::tip
 Reviewers typically require Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) reporting
@@ -67,9 +67,12 @@ studies that are relevant to your research question. These steps should be compl
 
 ### Importing studies
 
-But first, we must add studies to our Project.  Click the **Import Studies** button on the top right of the screen.
+But first, we must add studies to our Project. Click the **Import Studies** button on the top right of the screen to open the import dialog.
 
-You can search for studies within the *NeuroStore* database—which we maintain and indexes over 20,000 pre-processed neuroimaging studies—or from external sources, such as PubMed or a Citation manager file. 
+From here you can:
+
+* search for studies within the *NeuroStore* database—our curated collection that indexes over 30,000 pre-processed neuroimaging studies; or
+* import from external sources, such as PubMed, a Sleuth file, or a citation manager file.
 
 ![Import Studies](/tutorial/import_studies_options.png). 
 
@@ -87,7 +90,9 @@ Searching NeuroStore is a valid option for a manual meta-analysis to balance rig
 
 #### Searching PubMed
 
-We can export any PubMed search result to file, and import that file into Neurosynth Compose. 
+We can export any PubMed search result to file, and import that file into Neurosynth Compose using the **PubMed** import option. 
+The importer expects a plain-text file with one PubMed ID (PMID) per line.
+
 In this example, we perform the following search which in the [PubMed](https://pubmed.ncbi.nlm.nih.gov/) search field:
 
 ```
@@ -108,7 +113,7 @@ Only a small percentage of these studies will meet all inclusion criteria. For t
 
 We can import this file into our Project by clicking **Upload File** or by
 copy/pasting the IDs into the box. Give this import a name for future reference.
-All studies imported from this search will be **Tagged** with the search name. 
+All studies imported from this search will be **tagged** with the search name. Tags are short labels that appear on each study (for example, the name of the PubMed search). You can use tags later as filters when you have multiple imports or want to quickly focus on a subset of studies.
 
 ![Import name](/tutorial/import_name.png)
 
@@ -123,7 +128,8 @@ The purpose **Identification** is to find *duplicate studies*, which is common w
 However, you can also manually review studies to identify any duplicates we might have missed.
 
 To review studies, click on the **Identification** column header, or an individual study. 
-For each study, you can choose to "Promote" it to the next phase, "Exclude" as a duplicate, or flag for later review.
+For each study, you can choose to "Promote" it to the next phase, "Exclude" as a duplicate, or flag for later review. 
+Click **Promote** to move a study from *Identification* into the *Screening* column.
 
 ![Identification review](/tutorial/identification_review.png)
 
@@ -135,11 +141,13 @@ In this example, there are no duplicates. To quickly advance, click **Promote Al
 
 ### Screening
 
-The goal of *Screening* is to determine if imported studies are relevant  to your research question, based on the the Tile 
+The goal of *Screening* is to determine if imported studies are relevant to your research question, based on the Title 
 and Abstract of each.
 
-To begin, click on the Screening column header from the main Curation board. The interface is 
+To begin, click on the *Screening* column header from the main Curation board, or click an individual study. The interface is 
 identical to the previous phase, except the default Exclusion reason is now **irrelevant**. 
+
+Within the review dialog, click **Promote** to move relevant studies into the *Eligibility* column, or choose **Exclude: irrelevant** when a study is not related to your research question.
 
 Go ahead and review all 13 studies to determine if they are relevant to the topic of *"Nicotine administration*". 
 Any studies that are not relevant will remain in this column and not advance.
@@ -155,7 +163,7 @@ This is where your expertise is most necessary, in order to create an interestin
 and filter studies accordingly. The results of this step depends on the researcher, and there may be reasonable scientific disagreements.
 :::
 
-To begin, click on the "Eligibility" column header, or a study, as before.
+To begin, click on the *Eligibility* column header, or a study, as before. Use **Promote** to advance eligible studies into the *Included* column, or select an appropriate Exclusion reason if they do not meet your criteria.
 
 ![Custom Eligibility](/tutorial/custom_exclusion.png)
 
@@ -187,6 +195,8 @@ At this point, you can review this final list, and view a PRISMA diagram visuall
 
 ![PRISMA](/tutorial/prisma_diagram.png)
 
+From this view you can also click **Download PRISMA Diagram as SVG** to save a high-resolution copy of the flow diagram for inclusion in manuscripts or presentations.
+
 To finish *Curation*, and create a final StudySet, click *Move on to Extraction* at the top right. 
 
 ## Extract and Annotation
@@ -204,7 +214,8 @@ saving you a lot of time and effort. However, you may want to verify and improve
 
 But first, we must create a StudySet containing your studies! 
 
-New studies not in the NeuroStore database will be created, and studies that match existing studies will be added to a newly created StudySet.
+During ingestion, *Neurosynth Compose* attempts to match each imported study to an existing record in the *NeuroStore* database. 
+When a match is found, that existing Study is reused; when no match exists, a new Study is created and added to the newly created StudySet.
 
 :::info   
 Studies in NeuroStore have multiple Versions, including those created by other users, as well as the original copy.
@@ -239,6 +250,9 @@ Let's start by editing a Study's Analyses.
 For new studies, we will not have any data, and it is necessary to manually enter these data from the text of a study. 
 We can create a new Analysis for each group of Coordinates, and input the data from the text:
 
+For each Analysis, locate the table of peak coordinates in the article, then add one row per coordinate (X, Y, Z) in the **Analysis Coordinates** table. 
+Use the drop-down menus above the table to set the statistic type (e.g., Z or t value) and coordinate space (e.g., MNI or Talairach).
+
 For studies already indexed by NeuroStore, we will already have pre-extracted Coordinates. You can use this same interface to verify and correct these data. 
 
 :::caution   
@@ -255,7 +269,7 @@ You can copy and paste coordinates from Microsoft Excel or Google Sheets.
 
 A key goal of the Extraction phase, is to add Annotations that can help us distinguish Analyses, and include/exclude specific Analyses from a meta-analysis. Annotations are simply columns of data with a value for all Analyses within a StudySet.
 
-Annotations can be explained as a way to categorize analyses within each study. For example, they can be categorized by task (e.g., Stroop, N-back, etc.), by modality (e.g., fMRI, PET, etc.), or by any other category that you want to use to filter the analyses. 
+Annotations can be explained as a way to categorize analyses within each study. For example, they can be categorized by task (e.g., Stroop, N-back, etc.), by modality (e.g., fMRI, PET, etc.), or by any other category that you want to use to filter the analyses. See the [Glossary entry on Annotations](/guide/glossary#annotation) for additional background.
 
 :::tip   
 By default, a single Annotation called "included" is created, which includes all Analyses. 
@@ -276,7 +290,7 @@ Now, when I look at a study, I can edit the value for Analyses, assigning each g
 
 ## Meta-analysis specification
 
-You are finally ready to specify a meta-analysis! 
+You are finally ready to specify a meta-analysis! From the Project page, click **Proceed to Meta-Analysis** (top right of the StudySet card; see screenshot below) to open the specification wizard.
 
 ![start meta-analysis specification](/tutorial/proceed_meta_analysis.png)
 
@@ -318,3 +332,5 @@ You can execute your Meta-Analysis for free in the cloud on Google Colab by copy
 and pasting it into our Google Colab notebook.
 
 ![Meta-analysis run](/tutorial/ma_run.png)
+
+Once your analysis has finished, Neurosynth Compose will link to a public **NeuroVault collection** containing the resulting statistical maps. You can open this collection to visually inspect thresholded and unthresholded images, share results with collaborators, and download images for follow-up or exploratory analyses.
