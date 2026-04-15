@@ -1,5 +1,5 @@
 ---
-title: ALE and MKDA: A Comparison of Two Coordinate-Based Meta-Analysis Methods
+title: ALE and MKDA-A Comparison of Two Coordinate-Based Meta-Analysis Methods
 authors: james
 tags: [neurosynth, ALE, MKDA]
 ---
