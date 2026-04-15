@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkns_compose_docs=self.webpackChunkns_compose_docs||[]).push([[4078],{3789:s=>{s.exports=JSON.parse('{"label":"ALE","permalink":"/compose-docs/blog/tags/ale","allTagsPath":"/compose-docs/blog/tags","count":1}')}}]);

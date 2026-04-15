@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkns_compose_docs=self.webpackChunkns_compose_docs||[]).push([[9372],{4724:s=>{s.exports=JSON.parse('{"label":"MKDA","permalink":"/compose-docs/blog/tags/mkda","allTagsPath":"/compose-docs/blog/tags","count":1}')}}]);

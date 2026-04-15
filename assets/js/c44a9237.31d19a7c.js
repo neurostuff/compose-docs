@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkns_compose_docs=self.webpackChunkns_compose_docs||[]).push([[6433],{7048:o=>{o.exports=JSON.parse('{"permalink":"/compose-docs/blog/tags/ale","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
