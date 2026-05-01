@@ -24,8 +24,8 @@ import Typography from '@mui/material/Typography';
 ## Get started! 🚀 
 
 
-<div style={{ display: 'flex' }}>
-  <Card style={{ width: '100%', display: 'flex', marginRight: '50px' }}>
+<div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+  <Card style={{ flex: '1 1 240px', display: 'flex' }}>
     <CardContent>
       <Typography variant="h5" component="h2" gutterBottom>
         Tutorials
@@ -38,7 +38,7 @@ import Typography from '@mui/material/Typography';
       </Button>
     </CardContent>
   </Card>
-  <Card style={{ width: '100%', display: 'flex' }}>
+  <Card style={{ flex: '1 1 240px', display: 'flex' }}>
     <CardContent>
       <Typography variant="h5" component="h2" gutterBottom>
         User Guide
@@ -48,6 +48,19 @@ import Typography from '@mui/material/Typography';
       </Typography>
       <Button variant="contained" color="primary" href="guide">
         Go to User Guide
+      </Button>
+    </CardContent>
+  </Card>
+  <Card style={{ flex: '1 1 240px', display: 'flex' }}>
+    <CardContent>
+      <Typography variant="h5" component="h2" gutterBottom>
+        FAQ
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        Find answers to common questions about collaboration, automated analyses, algorithms, and annotations.
+      </Typography>
+      <Button variant="contained" color="primary" href="introduction/faq">
+        Go to FAQ
       </Button>
     </CardContent>
   </Card>
