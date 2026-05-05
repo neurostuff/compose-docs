@@ -50,7 +50,8 @@ It is on our roadmap to provide more robust collaboration features in the future
 
 <details>
 <summary>How do I run a legacy Neurosynth-like meta-analysis?</summary>
-Use the <a href="../tutorial/automated">Automated Meta-Analysis tutorial</a> as the closest workflow. In brief: create a Project, use the Simple curation workflow, import studies from NeuroStore using your search term, promote the relevant studies to Included, move to Extraction, and then create a Meta-Analysis Specification. Using the search term is similar to the tf-idf approach used in the original Neurosynth platform since the threshold for inclusion was so low, if the word was mentioned in the abstract, it would be included.
+Use the <a href="../tutorial/automated">Automated Meta-Analysis tutorial</a> as the closest workflow. In brief: create a Project, use the Simple curation workflow, import studies from NeuroStore using your search term, promote the relevant studies to Included, move to Extraction, and then create a Meta-Analysis Specification. Using the search term is similar to the tf-idf approach used in the original Neurosynth platform since the threshold for inclusion was so low (1 in 1000 words), if the word was mentioned in the abstract, it would be included, 
+as long as it isn't a common word in the english language. So, for example, if you wanted to run a meta-analysis on working memory, you could search for `working memory` in the NeuroStore database, and then include all studies that mention that term in the abstract.
 <br/><br/>
 For the algorithm, select `MKDAChi2`. This is the large-scale association-test workflow used by the original Neurosynth platform. When prompted for a reference dataset, choose `Neurosynth` if you want the legacy Neurosynth reference sample, or `Neurostore` if you want the newer continuously updated database.
 </details>
@@ -63,4 +64,11 @@ An annotation is a column of structured information attached to the Analyses in 
 Annotations are most often used to decide which Analyses should be included in a meta-analysis. For example, a Boolean annotation can mark each Analysis as included or excluded, and the Meta-Analysis Specification step can use that annotation column to select the final inputs.
 <br/><br/>
 See the <a href="../guide/glossary#annotation">Glossary entry on Annotations</a> and the <a href="../guide/Project/Extraction#annotations">Extraction guide</a> for more detail.
+</details>
+
+
+<details>
+<summary>When I upload a new Study that's not in the database, are coordinates automatically extracted?</summary>
+Coordinates are not automatically extracted when you upload a new Study. You will need to manually specify the coordinates for each Analysis in the Study.
+This is on our roadmap to automate in the future.
 </details>
