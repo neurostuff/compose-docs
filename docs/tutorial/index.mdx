@@ -2,7 +2,7 @@
 # Tutorials
 
 
-import { Grid, Card, CardContent, Typography, Button } from '@mui/material';
+import { Card, CardContent, Typography, Button } from '@mui/material';
 
 import { Link } from 'react-router-dom';
 import DocCardList from '@theme/DocCardList';
@@ -15,8 +15,8 @@ from exploratory large-scale automated analyses to highly rigorous manual analys
 The choice of workflow depends on your research question and resources available for manual curation.
 We reccomend starting with the **manual meta-analysis** tutorial if you are new.
 
-<div style={{ display: 'flex' }}>
-    <Link to="tutorial/manual" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px' }}>
+    <Link to="tutorial/manual" style={{ textDecoration: 'none', flex: '1 1 320px', cursor: 'pointer' }}>
         <Card style={{ borderRadius: '8px' }}>
         <CardContent>
             <Typography variant="h5" component="h2" gutterBottom>
@@ -34,7 +34,7 @@ We reccomend starting with the **manual meta-analysis** tutorial if you are new.
         </CardContent>
         </Card>
     </Link>
-    <Link to="tutorial/automated" style={{ textDecoration: 'none' }} style={{ width: '100%', display: 'flex', marginRight: '30px', cursor: 'pointer' }}>
+    <Link to="tutorial/automated" style={{ textDecoration: 'none', flex: '1 1 320px', cursor: 'pointer' }}>
         <Card style={{ borderRadius: '8px' }}>
         <CardContent>
             <Typography variant="h5" component="h2" gutterBottom>
@@ -52,9 +52,26 @@ We reccomend starting with the **manual meta-analysis** tutorial if you are new.
         </CardContent>
         </Card>
     </Link>
+    <Link to="tutorial/cognitive_control_aging" style={{ textDecoration: 'none', flex: '1 1 320px', cursor: 'pointer' }}>
+        <Card style={{ borderRadius: '8px' }}>
+        <CardContent>
+            <Typography variant="h5" component="h2" gutterBottom>
+            Cognitive Control & Aging
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <em>Manual workflow with explicit criteria.</em><br/><br/>
+                <ul>
+                    <li>Older adults defined as 65+</li>
+                    <li>Tasks: Stroop, Flanker, Go/NoGo, Stop-signal, N-back</li>
+                    <li>Between-group contrasts: older vs younger</li>
+                    <li>Excludes connectivity-only and no-coordinate studies</li>
+                </ul>
+            </Typography>
+        </CardContent>
+        </Card>
+    </Link>
 </div>
 
 
 ### Advanced tutorials
 After you've completed the core tutorials above, you can continue your learning journey with [advanced tutorials](./tutorial/advanced).
-
