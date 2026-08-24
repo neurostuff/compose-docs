@@ -12,17 +12,16 @@ Well, almost, it's in Beta so we haven't made all the knobs
 accessible yet, but enough knobs to do some legitimate work.
 This tutorial builds a complete image-based meta-analysis (IBMA) end to end: 16 candidate
 studies found, 12 retained through PRISMA screening and eligibility, 19 statistical maps
-selected, and a Stouffers meta-analysis run in the cloud. Every screenshot is from a real
-run on `staging.synth.neurostore.xyz`.
+selected, and a Stouffers meta-analysis run in the cloud. 
 
-The emphasis throughout is on **the steps where IBMA differs from coordinate-based
-meta-analysis (CBMA)**. If you have run a CBMA in Compose before, the curation flow will
-look familiar — but three steps behave differently in ways that will silently ruin your
-analysis if you skip them. They are flagged **▲ IBMA-SPECIFIC** below.
+I'm assuming many of you are familiar with the general workflow of a CBMA; so I will place emphasis on **the steps where IBMA differs from coordinate-based
+meta-analysis (CBMA)**.
+The curation flow will
+look familiar — but some steps are meaningfully different. They are flagged **▲ IBMA-SPECIFIC** below.
 
 ---
 
-## 0. Why IBMA, and what it costs you
+## 0. CBMA vs IBMA: poor and big data versus rich and small data
 
 A CBMA takes the *peak coordinates* a paper reports — a handful of `(x, y, z)` rows that
 survived the authors' threshold. An IBMA takes the *whole statistical map*: every voxel,
@@ -31,7 +30,7 @@ and can combine effect sizes rather than merely testing whether reported peaks c
 space.
 
 The cost is availability. Measured against the live NeuroStore database on the day this
-tutorial was written:
+tutorial was written (08/23/2026):
 
 | | CBMA | IBMA |
 |---|---|---|
@@ -48,8 +47,7 @@ That last row is the practical reason this tutorial uses 19 maps and not 750.
 
 ### Which statistic types can be used?
 
-Fishers and Stouffers both require **z maps**. But z does not have to be what the authors
-uploaded — Compose can derive it:
+Fishers and Stouffers both require **z maps**. But you can input other statistic types — Compose can derive it:
 
 ```
 z  ←  p
@@ -95,11 +93,6 @@ Give the project a name and description by clicking the pencil icons.
 
 ![Project page](/tutorial/ibma_02_project_page.png)
 
-:::warning
-**Gotcha:** pressing <kbd>Enter</kbd> in the inline name editor does *not* save. You must
-click `SAVE`.
-:::
-
 ---
 
 ## 2. Choose the PRISMA workflow
@@ -133,26 +126,19 @@ Open it:
 `Z Map` / `T Map` / `Beta_variance Map` / `Any Map`. **This is the single most important
 control in the IBMA workflow** and it defaults to `Any`, which will hand you anatomical
 templates, ROI masks and F maps alongside usable data.
+Sometimes people label the data incorrectly, so using `Any` will be more comprehensive.
 
+For this tutorial, we are going to use `Z Map` to keep the example simple.
 Select **Z Map**, type `reward`, and search. Result: **16 studies**.
 
 ![Reward search filtered to Z maps](/tutorial/ibma_06_search_reward_zmap.png)
-
-For reference, the same query without the Map Type filter returns 85 studies — the filter
-is doing most of the quality control that a CBMA search never needs.
-
-:::note
-The search page cannot be reached by URL from a cold start; it must be entered by
-clicking `SEARCH` from the curation board. Bookmarking it, or refreshing while on it,
-loses your search.
-:::
 
 ---
 
 ## 4. Name and review the import
 
 Click `NEXT`. Name the import something that records your query — future-you will want to
-know exactly what produced this set.
+know exactly what produced this set. We do our best to preserve the query in the import name, but if you want to name it something else, do so here.
 
 ![Name and review](/tutorial/ibma_07_name_and_review.png)
 
@@ -205,30 +191,14 @@ no group-level reward effect to contribute. **15 studies** proceed. Select all a
 
 ---
 
-## 7. ▲ IBMA-SPECIFIC — Eligibility means assessing the *maps*
+## 7. Eligibility — full text assessment
 
-![Eligibility](/tutorial/ibma_12_eligibility.png)
-
-In a CBMA, "full-text eligibility assessment" means reading the paper — does it report
-whole-brain coordinates in a standard space, is the sample independent, and so on.
-
-**In an IBMA it also means auditing the deposited NeuroVault collection.** Three of the four
-exclusions in this tutorial were facts about the uploaded images that are entirely invisible
-in the paper's abstract:
-
-| Study | Reason | How you'd find out |
-|---|---|---|
-| *Triangulating the Neural, Psychological, and Economic Bases of Guilt Aversion* (2011) | Only thresholded (FWE) map deposited | Its single z map is named `Guilt Aversion` — innocuous. The **filename** is `GuiltVsReward_fwe05.nii.gz` |
-| *Early childhood stress … ventral tegmental area* (2021) | ROI-restricted maps only | All 48 of its analyses are prefixed `NAcc:` |
-| *Choosing to view morbid information involves reward circuitry* (2020) | No designated primary contrast | 32 combinatorial variants (`cue-{neg,pos,negpos}` × `contrast-{act,pas,actpas,pasact}`) with no principled way to choose |
-
-The first is the one to internalise. **A thresholded map is poison for IBMA**: voxels below
-the authors' threshold are stored as exact zeros, so the meta-analysis reads "no effect"
-where the truth is "not individually significant". A CBMA is immune to this — thresholded
-peaks are its native input. And the analysis *name* will not warn you. You have to look at
-the filename or URL.
-
-Use `OUT OF SCOPE` with a distinct custom reason for each.
+Currently, you can only assess eligibility from the full text; checking
+for method designs, what contrasts were actually analyzed, etc.
+We may decide to add links to the corresponding neurovault collection,
+so you can assess whether the image corresponding to the contrast
+you want is actually available.
+For now, that will be decided during the extraction step.
 
 ![After eligibility exclusions](/tutorial/ibma_13_eligibility_excluded.png)
 
@@ -242,34 +212,6 @@ Use `OUT OF SCOPE` with a distinct custom reason for each.
 
 ![PRISMA diagram](/tutorial/ibma_14_prisma_diagram.png)
 
-```
-Identified (Neurostore)          n = 16
-  ↓
-Screened                         n = 16
-  └─ excluded: group-comparison design; no reward main effect   n = 1
-  ↓
-Sought for retrieval             n = 15
-Assessed for eligibility         n = 15
-  ├─ excluded: only thresholded (FWE) map deposited             n = 1
-  ├─ excluded: ROI-restricted maps only (NAcc)                  n = 1
-  └─ excluded: no designated primary contrast (32 variants)     n = 1
-  ↓
-Included in review               n = 12
-```
-
-:::caution
-**Two warnings about this diagram.**
-
-1. **It is only correct once curation is complete.** While studies remain uncategorised,
-   "Records identified from" counts *only* studies that have already been excluded or
-   included — mid-curation it can read `n = 16` when you have imported 142. Finish
-   curating before you trust or export it.
-2. **Do not export it as SVG.** The `DOWNLOAD PRISMA DIAGRAM AS SVG` option wraps the
-   whole diagram in a single `<foreignObject>` of HTML. It renders in browsers and nowhere
-   else — opened in Inkscape, Illustrator, or a LaTeX pipeline, every box and number
-   disappears and only the arrows survive. **Use the PNG or JPEG option** from the same
-   dropdown.
-:::
 
 ---
 
@@ -282,10 +224,8 @@ your 12 included studies, ingests anything new into NeuroStore, and creates a de
 ![Extraction table](/tutorial/ibma_15_extraction_table.png)
 
 **A note on versions.** A NeuroStore study can have several versions, and they do not all
-contain the same images. Four of the twelve studies here carry z maps *only in their third
-version*. In this run, ingestion selected the correct z-bearing version for all twelve
-automatically — but if a study turns out to have no usable images, the `SWITCH VERSION`
-button on its detail page is the fix. Check it before assuming a study is unusable.
+contain the same images. Four of the twelve studies here carry z maps *only in one of three 
+of the available versions*.
 
 ---
 
@@ -304,16 +244,18 @@ Open any study to see what you are actually choosing between.
 Uncheck everything that is not a contrast you want. Three rules:
 
 1. **Prefer unthresholded.** Where a study deposits both, e.g. `thresh affective` and
-   `unthresh affective`, take the unthresholded one — always.
+   `unthresh affective`, always choose the unthresholded one.
 2. **One inference type.** Do not pool activation maps with PPI/connectivity maps; they test
    different things. In this set, 5 of one study's 10 analyses are PPI.
 3. **Never include both signs of the same contrast.** `"betting minus watching"` and
    `"watching minus betting"` are the same map negated; including both cancels to zero.
-   Ambiguity can justify keeping several contrasts — opposite signs never can.
+   Don't do that if you want a result from the meta-analysis. 
 
 On rule 3's flip side: where a paper offers several equally defensible contrasts and no
 principled way to choose, **keeping more than one is better than guessing**. Forcing a
-single pick substitutes your judgement for the data. Six of the twelve studies here
+single pick substitutes your judgement for the data, and the statistical cost of keeping
+several is lower than you might expect — NiMARE automatically corrects the variance for
+contrasts that share a study (see caveat 2 in §14). Six of the twelve studies here
 contribute two or three contrasts for exactly this reason.
 
 ![Image selection](/tutorial/ibma_17_image_selection.png)
@@ -376,13 +318,6 @@ Click `NEXT`. Verify the count.
 
 `Included: 12 studies | 19 analyses | 0 coordinates`
 
-:::note
-`0 coordinates` is expected and not an error — but note the summary never tells you how
-many *images* you have, which is the number that actually matters here. The "analyses"
-figure is your proxy. The instruction text above it also mentions "coordinates"; ignore
-that in an IBMA project.
-:::
-
 Name it, then check the Review screen.
 
 ![Review](/tutorial/ibma_20_review.png)
@@ -422,9 +357,7 @@ At the default threshold (z > 2.58), almost the entire brain survives correction
 
 **This is not a bug, and it is worth understanding.** Stouffers over 19 unthresholded maps
 is extremely powerful, and unthresholded maps share a great deal of global structure, so the
-null hypothesis of exactly zero is rejected nearly everywhere. The top cluster is reported
-as 1,286,720 mm³ — larger than a whole brain. **Interpret the peak structure, not the
-extent.**
+null hypothesis of exactly zero is rejected nearly everywhere.
 
 Raising the threshold to z > 6 with soft-thresholding off gives an interpretable figure:
 
@@ -465,43 +398,5 @@ The interesting observation is one of efficiency: **19 maps from 12 studies reco
 same core system that required ~200 studies to establish by coordinate-based methods.** That
 is the theoretical case for IBMA in one result — each study contributes whole-brain evidence
 rather than a handful of supra-threshold peaks. It is a demonstration, not a replication, but
-it shows the direction of the trade.
-
-### Caveats — read before citing anything here
-
-1. **Paradigm heterogeneity.** The pool mixes food-reward bidding, musical prediction error,
-   gambling, effort/probability/time discounting, and reward-history effects on inhibition.
-   This is a "generalised valuation" pool, closer in spirit to Bartra et al. than to a
-   single-paradigm synthesis. Convergence on striatum/vmPFC is what you would expect from
-   such a mixture; it does not license claims about any specific task.
-2. **Non-independence.** Six of the twelve studies contribute two or three contrasts.
-   Stouffers treats all 19 as independent, so those studies are over-weighted and the
-   variance is underestimated, making p-values anti-conservative. **Recommended sensitivity
-   check:** create a second annotation column with one contrast per study (12 images),
-   create a second specification pointing at that column, and compare. Compose supports
-   multiple annotation columns and multiple specifications per project precisely for this.
-3. **Near-global significance**, as discussed above. Report peaks, not extent.
-4. **Twelve studies is small** for a publishable synthesis.
-5. **Space.** All included maps were MNI. Mixing spaces requires care that this tutorial
-   does not cover.
-
----
-
-## Appendix — the IBMA-specific steps at a glance
-
-If you take nothing else from this tutorial:
-
-| Step | Why it is IBMA-specific |
-|---|---|
-| **Set Map Type on search** | Only IBMA cares about statistic type. Defaults to `Any`, which admits templates, masks and F maps. |
-| **Eligibility = audit the maps** | Thresholded uploads, ROI-only collections and combinatorial contrast sets are invisible in the abstract and fatal or unusable here. |
-| **Choose images, not studies** | 12 studies → 77 analyses, all included by default. This step does not exist in CBMA. |
-| **Prefer unthresholded** | Zeros from the authors' threshold are read as true nulls. CBMA is immune; IBMA is not. |
-| **`aggressive_mask`** | Studies differ in brain coverage. No CBMA analogue. |
-| **Expect long runtimes** | Full NIfTI volumes are downloaded per image. 19 images ≈ 4 min; 746 images > 73 min. |
-| **Interpret peaks, not extent** | Per-voxel combination of unthresholded maps is very powerful; significance can be near-global. |
-
----
-
-*Built on `staging.synth.neurostore.xyz`. Project `ohEiXtqKh9xj`, studyset `mmV5Um38Kok9`,
-meta-analysis `v6r79o8b2vdM`. Peak coordinates: [`ibma_peaks.csv`](/tutorial/ibma_peaks.csv).*
+it shows that even with limited data, the approach can yield robust and meaningful results.
+Go forth, try it, and see what you can discover (and report bugs!).
